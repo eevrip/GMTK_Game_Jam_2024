@@ -15,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
 	//just paste in all the parameters, though you will need to manuly change all references in this script
 	public PlayerData Data;
 
-	#region COMPONENTS
+    [SerializeField]
+    private bool quantumLevel;
+
+    #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 	public PlayerAnimator AnimHandler { get; private set; }
@@ -275,7 +278,12 @@ public class PlayerMovement : MonoBehaviour
 			//No gravity when dashing (returns to normal once initial dashAttack phase over)
 			SetGravityScale(0);
 		}
-		#endregion
+        #endregion
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            changeDimension();
+        }
     }
 
     private void FixedUpdate()
@@ -296,6 +304,8 @@ public class PlayerMovement : MonoBehaviour
 		//Handle Slide
 		if (IsSliding)
 			Slide();
+
+        
     }
 
     #region INPUT CALLBACKS
@@ -583,6 +593,19 @@ public class PlayerMovement : MonoBehaviour
 		Gizmos.DrawWireCube(_backWallCheckPoint.position, _wallCheckSize);
 	}
     #endregion
+
+    private void changeDimension()
+    {
+        quantumLevel = !quantumLevel;
+        if (!quantumLevel)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 15);
+        }
+    }
 }
 
 // created by Dawnosaur :D
