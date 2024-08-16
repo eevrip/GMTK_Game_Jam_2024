@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 3481916797816890076}
   - component: {fileID: 2246853015937302732}
   - component: {fileID: 5152753267345164901}
+  - component: {fileID: 1783766166700139588}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -352,6 +353,21 @@ MonoBehaviour:
   landFX: {fileID: 3234584074981126610, guid: 0618e2f871341254cafc1ffc33fc18df, type: 3}
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   currentVelY: 0
+--- !u!114 &1783766166700139588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8293594022593229129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a3c006e4d821640b948ae8f50018a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 1549538148824678541, guid: 58b24d99b8326e143b1f18b1a2a26bf1, type: 3}
+  projectileLaunchVelocity: 1000
+  launchOffset: {x: 1, y: 0, z: 0}
 --- !u!1 &8371689183173391842
 GameObject:
   m_ObjectHideFlags: 0
