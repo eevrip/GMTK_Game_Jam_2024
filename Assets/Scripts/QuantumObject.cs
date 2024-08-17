@@ -5,31 +5,24 @@ using UnityEngine.UIElements;
 
 public class QuantumObject : MonoBehaviour
 {
-  
     [SerializeField]
     private QuantumObject entangledObj;
-    [SerializeField]
-    [Range(2, 5)]
-    private int numScaleLvls;
-    [SerializeField]
     private QuantumObjectsManager manager;
-    public QuantumObjectsManager Manager => manager;
+
     [SerializeField]
     private QuantumObjectsManager.Level startingScaleLvl;
 
     private QuantumObjectsManager.Level currScaleLvl;
   
-   
 
-    void Awake()
+    private void Start()
     {
-       
         currScaleLvl = startingScaleLvl;
+        manager = QuantumObjectsManager.instance;
+
         //Set the correct scale of the object
         float scaleXY = manager.LvlScale(currScaleLvl);
         transform.localScale = new Vector3(scaleXY, scaleXY, 1f);
-         
-
     }
 
     //------------------
@@ -64,16 +57,13 @@ public class QuantumObject : MonoBehaviour
         
     }
 
-
-    
-
     //If reach min scale level return -1, if reach max scale level return 1
     public int ReachBoundary()
     {
 
         if (currScaleLvl == QuantumObjectsManager.Level.Level1)
             return -1;
-        else if (currScaleLvl == (QuantumObjectsManager.Level)(numScaleLvls - 1))
+        else if (currScaleLvl == (QuantumObjectsManager.Level.Count - 1))
             return 1;
         else
             return 0;
