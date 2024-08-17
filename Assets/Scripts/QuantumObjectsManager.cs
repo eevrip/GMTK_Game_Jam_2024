@@ -2,15 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScaleLevels : MonoBehaviour
+public class QuantumObjectsManager : MonoBehaviour
 {
     [SerializeField]
     private float[] sclLvls = new float[5];
-    [SerializeField] private int totNumQuantumObjects;
-    public int TotNumEntangledQuantumObjects => totNumQuantumObjects;
+
+  
     public enum Level { Level1, Level2, Level3, Level4, Level5 };
 
-    
+    void Awake()
+    {
+
+        
+
+
+
+    }
+    //Only two objects are entangled
+    public void ChangeLevelOfEntangledObjs(QuantumObject target, QuantumObject entangled, int i)
+    {
+        target.ChangeScaleLevel(i);
+        entangled.ChangeScaleLevel(-i);
+    }
 
     public float LvlScale(Level lvl)
     {
@@ -25,7 +38,7 @@ public class ScaleLevels : MonoBehaviour
             scl = sclLvls[3];
         else if (lvl == Level.Level5)
             scl = sclLvls[4];
-      
+
 
         return scl;
     }

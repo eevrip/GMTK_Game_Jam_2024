@@ -8,114 +8,69 @@ public class QuantumObject : MonoBehaviour
     [SerializeField]
     private int quantumObjId;
     [SerializeField]
-    private List<QuantumObject> entangledObjs;
+    private QuantumObject entangledObj;
     [SerializeField]
     [Range(2, 5)]
     private int numScaleLvls;
     [SerializeField]
-    private ScaleLevels.Level startingScaleLvl;
-
-    private ScaleLevels.Level currScaleLvl;
+    private QuantumObjectsManager manager;
+    public QuantumObjectsManager Manager => manager;
     [SerializeField]
-    private ScaleLevels lvls;
+    private QuantumObjectsManager.Level startingScaleLvl;
 
-
+    private QuantumObjectsManager.Level currScaleLvl;
+  
+   
 
     void Awake()
     {
-
+        quantumObjId = transform.GetSiblingIndex();
         currScaleLvl = startingScaleLvl;
         //Set the correct scale of the object
-        float scaleXY = lvls.LvlScale(currScaleLvl);
+        float scaleXY = manager.LvlScale(currScaleLvl);
         transform.localScale = new Vector3(scaleXY, scaleXY, 1f);
+         
 
     }
 
-    // Update is called once per frame
-    void Update()
+    //------------------
+    //This is a temp function to see if it works. The manager.ChangeLevelOfEntangledObjs() will be called when the bullet collides with the collider of the respected quantumObj
+    //----------------------------
+    public void testTempScale(int i)
     {
-
+        manager.ChangeLevelOfEntangledObjs(this, entangledObj, i);
     }
-
-    /*  public void AddEntangledObj(QuantumObject obj)
-      {
-          entangledObjs.Add(obj);
-          entangledObjs[entangledObjs.Count].AddEntangledObj(this);
-      }*/
-
-    public void ChangeLevel(int i)
+    //--------------------------------------
+    //-----------------------------------------------
+   
+    
+    
+    public void ChangeScaleLevel(int i)
     {
-        int[] alreadyChanged = new int[lvls.TotNumEntangledQuantumObjects]; //The total number of objects that are entangled together
-
         if (i < 0 && ReachBoundary() == -1)
             return;
         else if (i > 0 && ReachBoundary() == 1)
             return;
-
-        /*  foreach (var obj in entangledObjs)
-          {
-              if (alreadyChanged[obj.quantumObjId] == 0)//if not checked
-              {  
-
-                  if (-i < 0 && obj.ReachBoundary() == -1)
-                      return;
-                  else if (-i > 0 && obj.ReachBoundary() == 1)
-                      return;
-
-
-                  obj.ToChangeLevel(-i, alreadyChanged);
-              }
-          } */
-        ToChangeLevel(i, alreadyChanged);
-
-
-    }
-    public bool ToChangeLevel(int i, int[] alreadyChanged)
-    {
-
-        alreadyChanged[quantumObjId] = 1;
-        foreach (var obj in entangledObjs)
-        {
-            if (alreadyChanged[obj.quantumObjId] == 0)//if not checked
-            {
-
-                if (-i < 0 && obj.ReachBoundary() == -1)
-                    return false;
-                else if (-i > 0 && obj.ReachBoundary() == 1)
-                    return false;
-
-
-                if (!obj.ToChangeLevel(-i, alreadyChanged))
-                {
-                    return false;
-
-                }
-            }
-        }
-
-        //if (alreadyChanged[quantumObjId] == 0)
-        // {
-        if (i < 0 && ReachBoundary() != -1)
+        else if (i < 0 && ReachBoundary() != -1)
             currScaleLvl--;
         else if (i > 0 && ReachBoundary() != 1)
             currScaleLvl++;
 
-        float scaleXY = lvls.LvlScale(currScaleLvl);
+        float scaleXY = manager.LvlScale(currScaleLvl);
         transform.localScale = new Vector3(scaleXY, scaleXY, 1f);
-        return true;
-        //  }
-
-
-
+        
     }
+
+
+    
 
     //If reach min scale level return -1, if reach max scale level return 1
     public int ReachBoundary()
     {
 
-        if (currScaleLvl == ScaleLevels.Level.Level1)
+        if (currScaleLvl == QuantumObjectsManager.Level.Level1)
             return -1;
-        else if (currScaleLvl == (ScaleLevels.Level)(numScaleLvls - 1))
+        else if (currScaleLvl == (QuantumObjectsManager.Level)(numScaleLvls - 1))
             return 1;
         else
             return 0;

@@ -18,12 +18,13 @@ public class ClickableObject : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //obj.ChangeSize(2f);
-            obj.ChangeLevel(1);
+            obj.testTempScale(1);
             
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            obj.ChangeLevel(-1);
+            // obj.ChangeLevel(-1);
+            obj.testTempScale(-1);
         }
     }
     // Start is called before the first frame update
