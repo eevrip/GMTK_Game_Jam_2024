@@ -6,6 +6,8 @@ public class ScaleLevels : MonoBehaviour
 {
     [SerializeField]
     private float[] sclLvls = new float[5];
+    [SerializeField] private int totNumQuantumObjects;
+    public int TotNumEntangledQuantumObjects => totNumQuantumObjects;
     public enum Level { Level1, Level2, Level3, Level4, Level5 };
 
     
@@ -21,8 +23,9 @@ public class ScaleLevels : MonoBehaviour
             scl = sclLvls[2];
         else if (lvl == Level.Level4)
             scl = sclLvls[3];
-        else if (lvl == Level.Level4)
+        else if (lvl == Level.Level5)
             scl = sclLvls[4];
+      
 
         return scl;
     }
