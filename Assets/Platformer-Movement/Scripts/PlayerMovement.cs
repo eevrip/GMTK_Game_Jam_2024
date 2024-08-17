@@ -8,6 +8,7 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private bool quantumLevel;
+
+	[SerializeField] private int health;
+	[SerializeField] private Slider healthSlider;
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -280,10 +284,16 @@ public class PlayerMovement : MonoBehaviour
 		}
         #endregion
 
+        #region Change Dimension
         if (Input.GetKeyDown(KeyCode.E))
         {
             changeDimension();
         }
+        #endregion
+
+        #region Health
+		healthSlider.value = health;
+        #endregion
     }
 
     private void FixedUpdate()
