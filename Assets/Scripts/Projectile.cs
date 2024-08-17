@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
 {
     public enum ProjectileType { Grow, Shrik}
     public ProjectileType projectileType = ProjectileType.Grow;
-
+    
     void Start()
     {
         
@@ -26,15 +26,11 @@ public class Projectile : MonoBehaviour
         {
             switch (projectileType)
             { 
-                case ProjectileType.Grow:
-
-                    
-                    qo.ChangeLevel(1);
-
-                   
+                case ProjectileType.Grow:                 
+                    QuantumObjectsManager.instance.ChangeLevelOfEntangledObjs(qo, 1);                  
                     break;
                 case ProjectileType.Shrik:
-                    qo.ChangeLevel(-1);
+                    QuantumObjectsManager.instance.ChangeLevelOfEntangledObjs(qo, -1);
                     break;
                 default:
                     break;

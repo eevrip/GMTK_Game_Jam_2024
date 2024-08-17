@@ -7,6 +7,7 @@ public class QuantumObject : MonoBehaviour
 {
     [SerializeField]
     private QuantumObject entangledObj;
+    public QuantumObject EntangledObj => entangledObj;
     private QuantumObjectsManager manager;
 
     [SerializeField]
@@ -25,16 +26,7 @@ public class QuantumObject : MonoBehaviour
         transform.localScale = new Vector3(scaleXY, scaleXY, 1f);
     }
 
-    //------------------
-    //This is a temp function to see if it works. The manager.ChangeLevelOfEntangledObjs() will be called when the bullet collides with the collider of the respected quantumObj
-    //----------------------------
-    public void ChangeLevel(int i)
-    {
-        manager.ChangeLevelOfEntangledObjs(this, entangledObj, i);
-    }
-    //--------------------------------------
-    //-----------------------------------------------
-
+    
     public bool CanChangeScaleLevel(int i)
     {
         if (i < 0 && ReachBoundary() == -1)

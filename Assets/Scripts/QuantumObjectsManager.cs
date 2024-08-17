@@ -24,14 +24,16 @@ public class QuantumObjectsManager : MonoBehaviour
         }
     }
     //Only two objects are entangled
-    public void ChangeLevelOfEntangledObjs(QuantumObject target, QuantumObject entangled, int i)
+    public void ChangeLevelOfEntangledObjs(QuantumObject target, int i)
     {
-        if (target.CanChangeScaleLevel(i) && entangled.CanChangeScaleLevel(-i))
-        {
+        QuantumObject entangled = target.EntangledObj;
+        if(entangled)
+            if (target.CanChangeScaleLevel(i) && entangled.CanChangeScaleLevel(-i))
+            {
 
             target.ChangeScaleLevel(i);
             entangled.ChangeScaleLevel(-i);
-        }
+            }
     }
 
     public float LvlScale(Level lvl)
