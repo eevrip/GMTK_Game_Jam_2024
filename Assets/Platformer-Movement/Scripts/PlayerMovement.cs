@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
 	[SerializeField] private int health;
 	[SerializeField] private Slider healthSlider;
+	[SerializeField] private GameObject quantumLevelDesign;
+	[SerializeField] private GameObject nonQuantumLevelDesign;
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -604,18 +606,24 @@ public class PlayerMovement : MonoBehaviour
 	}
     #endregion
 
+    #region Change Dimension
     private void changeDimension()
     {
         quantumLevel = !quantumLevel;
         if (!quantumLevel)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+			quantumLevelDesign.SetActive(true);
+			nonQuantumLevelDesign.SetActive(false);
         }
         else
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 15);
+            quantumLevelDesign.SetActive(false);
+            nonQuantumLevelDesign.SetActive(true);
         }
     }
+    #endregion
 }
 
 // created by Dawnosaur :D
