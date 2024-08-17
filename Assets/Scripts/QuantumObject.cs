@@ -42,16 +42,20 @@ public class QuantumObject : MonoBehaviour
     }
     //--------------------------------------
     //-----------------------------------------------
-   
-    
-    
-    public void ChangeScaleLevel(int i)
+
+    public bool CanChangeScaleLevel(int i)
     {
         if (i < 0 && ReachBoundary() == -1)
-            return;
+            return false;
         else if (i > 0 && ReachBoundary() == 1)
-            return;
-        else if (i < 0 && ReachBoundary() != -1)
+            return false;
+        else return true;
+    }
+
+    public void ChangeScaleLevel(int i)
+    {
+        
+        if (i < 0 && ReachBoundary() != -1)
             currScaleLvl--;
         else if (i > 0 && ReachBoundary() != 1)
             currScaleLvl++;
