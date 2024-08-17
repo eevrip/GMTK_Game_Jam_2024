@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 
 public class QuantumObject : MonoBehaviour
 {
-    [SerializeField]
-    private int quantumObjId;
+  
     [SerializeField]
     private QuantumObject entangledObj;
     [SerializeField]
@@ -24,7 +23,7 @@ public class QuantumObject : MonoBehaviour
 
     void Awake()
     {
-        quantumObjId = transform.GetSiblingIndex();
+       
         currScaleLvl = startingScaleLvl;
         //Set the correct scale of the object
         float scaleXY = manager.LvlScale(currScaleLvl);
