@@ -27,10 +27,10 @@ public class Projectile : MonoBehaviour
             switch (projectileType)
             { 
                 case ProjectileType.Grow:
-                    qo.ChangeLevel(1);
+                    qo.ChangeScaleLevel(1);
                     break;
                 case ProjectileType.Shrik:
-                    qo.ChangeLevel(-1);
+                    qo.ChangeScaleLevel(-1);
                     break;
                 default:
                     break;
