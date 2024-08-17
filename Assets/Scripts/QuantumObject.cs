@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 
 public class QuantumObject : MonoBehaviour
 {
-    [SerializeField]
-    private int quantumObjId;
+  
     [SerializeField]
     private QuantumObject entangledObj;
     [SerializeField]
@@ -24,7 +23,7 @@ public class QuantumObject : MonoBehaviour
 
     void Awake()
     {
-        quantumObjId = transform.GetSiblingIndex();
+       
         currScaleLvl = startingScaleLvl;
         //Set the correct scale of the object
         float scaleXY = manager.LvlScale(currScaleLvl);
@@ -36,22 +35,26 @@ public class QuantumObject : MonoBehaviour
     //------------------
     //This is a temp function to see if it works. The manager.ChangeLevelOfEntangledObjs() will be called when the bullet collides with the collider of the respected quantumObj
     //----------------------------
-    public void testTempScale(int i)
+    public void ChangeLevel(int i)
     {
         manager.ChangeLevelOfEntangledObjs(this, entangledObj, i);
     }
     //--------------------------------------
     //-----------------------------------------------
-   
-    
-    
-    public void ChangeScaleLevel(int i)
+
+    public bool CanChangeScaleLevel(int i)
     {
         if (i < 0 && ReachBoundary() == -1)
-            return;
+            return false;
         else if (i > 0 && ReachBoundary() == 1)
-            return;
-        else if (i < 0 && ReachBoundary() != -1)
+            return false;
+        else return true;
+    }
+
+    public void ChangeScaleLevel(int i)
+    {
+        
+        if (i < 0 && ReachBoundary() != -1)
             currScaleLvl--;
         else if (i > 0 && ReachBoundary() != 1)
             currScaleLvl++;

@@ -21,8 +21,12 @@ public class QuantumObjectsManager : MonoBehaviour
     //Only two objects are entangled
     public void ChangeLevelOfEntangledObjs(QuantumObject target, QuantumObject entangled, int i)
     {
-        target.ChangeScaleLevel(i);
-        entangled.ChangeScaleLevel(-i);
+        if (target.CanChangeScaleLevel(i) && entangled.CanChangeScaleLevel(-i))
+        {
+
+            target.ChangeScaleLevel(i);
+            entangled.ChangeScaleLevel(-i);
+        }
     }
 
     public float LvlScale(Level lvl)

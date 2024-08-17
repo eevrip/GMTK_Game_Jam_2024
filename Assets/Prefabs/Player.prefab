@@ -327,6 +327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: cd22bd7f1a0806546984803f1cdd8e6f, type: 2}
+  quantumLevel: 0
+  health: 0
+  healthSlider: {fileID: 0}
   _groundCheckPoint: {fileID: 6398794294297143363}
   _groundCheckSize: {x: 0.49, y: 0.03}
   _frontWallCheckPoint: {fileID: 5438797827620468306}
@@ -365,9 +368,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a3c006e4d821640b948ae8f50018a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1549538148824678541, guid: 58b24d99b8326e143b1f18b1a2a26bf1, type: 3}
-  projectileLaunchVelocity: 1000
-  launchOffset: {x: 1, y: 0, z: 0}
+  growProjectilePrefab: {fileID: 7588259697736553076, guid: 8ab6b72a62c17c84dac7ecd63eae1b1f, type: 3}
+  shrikProjectilePrefab: {fileID: 2649992170811125180, guid: 6b38bd54fb334304cb6cf88e9423b57f, type: 3}
+  projectileLaunchVelocity: 700
+  projectileLaunchTorque: 10
+  launchOffset: {x: 0, y: 1, z: 0}
+  fireCooldown: 0.2
 --- !u!1 &8371689183173391842
 GameObject:
   m_ObjectHideFlags: 0
