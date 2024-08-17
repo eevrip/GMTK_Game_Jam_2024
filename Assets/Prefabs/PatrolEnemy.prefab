@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1551210185613219642}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5666661790885549807}
   - component: {fileID: 3410829634679081627}
   - component: {fileID: 5949704741139859491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Patrolling
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7978496028863449721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6693511254857576770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PatrolEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
