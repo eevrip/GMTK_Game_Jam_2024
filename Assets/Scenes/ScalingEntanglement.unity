@@ -159,9 +159,7 @@ MonoBehaviour:
   - {fileID: 1388834930}
   numScaleLvls: 2
   startingScaleLvl: 1
-  currScaleLvl: 0
   lvls: {fileID: 1050694620}
-  totNumQuantumObjects: 3
 --- !u!212 &355325984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -224,7 +222,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.57, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -321,6 +319,7 @@ MonoBehaviour:
   - 2
   - 3
   - 4
+  totNumQuantumObjects: 0
 --- !u!4 &1050694621
 Transform:
   m_ObjectHideFlags: 0
@@ -498,9 +497,7 @@ MonoBehaviour:
   - {fileID: 1388834930}
   numScaleLvls: 4
   startingScaleLvl: 3
-  currScaleLvl: 3
   lvls: {fileID: 1050694620}
-  totNumQuantumObjects: 3
 --- !u!212 &1367954252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -606,9 +603,7 @@ MonoBehaviour:
   - {fileID: 1367954251}
   numScaleLvls: 5
   startingScaleLvl: 2
-  currScaleLvl: 0
   lvls: {fileID: 1050694620}
-  totNumQuantumObjects: 3
 --- !u!212 &1388834931
 SpriteRenderer:
   m_ObjectHideFlags: 0
