@@ -15690,6 +15690,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7030672092939528698, guid: bc6521dfaa07ead44899b0df703d2d32, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 7229945854289440737, guid: bc6521dfaa07ead44899b0df703d2d32, type: 3}
       propertyPath: entangledObj
       value: 

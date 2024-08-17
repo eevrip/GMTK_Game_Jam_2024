@@ -23,6 +23,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         fireCooldownTimer += Time.deltaTime;
+
+        if (QuantumObjectsManager.instance.isInEntanglementMode)
+            return;
+
         if (fireCooldownTimer >= fireCooldown)
         {
             if (Input.GetButtonDown("Fire1"))
