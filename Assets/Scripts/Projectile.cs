@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-
+    public enum ProjectileType { Grow, Shrik}
+    public ProjectileType projectileType = ProjectileType.Grow;
 
     void Start()
     {
@@ -19,6 +21,22 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision!");
+        QuantumObject qo = collision.gameObject.GetComponent<QuantumObject>();
+        if (qo)
+        {
+            switch (projectileType)
+            { 
+                case ProjectileType.Grow:
+                    qo.ChangeLevel(1);
+                    break;
+                case ProjectileType.Shrik:
+                    qo.ChangeLevel(-1);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         Destroy(gameObject);
     }
 }
