@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class QuantumObject : MonoBehaviour
 {
     [SerializeField]
-    private QuantumObject entangledObj;
-    public QuantumObject EntangledObj => entangledObj;
+    public QuantumObject entangledObj;
+
     private QuantumObjectsManager manager;
 
     [SerializeField]
     private QuantumObjectsManager.Level startingScaleLvl;
 
     private QuantumObjectsManager.Level currScaleLvl;
-  
+    [SerializeField]
+    private GameObject EntangledVisuals;
 
     private void Start()
     {
@@ -59,5 +61,23 @@ public class QuantumObject : MonoBehaviour
             return 1;
         else
             return 0;
+    }
+
+    public void OnMouseDown()
+    {
+        if (entangledObj)
+        {
+            QuantumObject saveEntangledObjRef = entangledObj;
+            if (QuantumObjectsManager.instance.Disentangle(this))
+            {
+                EntangledVisuals.SetActive(false);
+                saveEntangledObjRef.EntangledVisuals.SetActive(false);
+            }
+        }
+        else
+        {
+            if (QuantumObjectsManager.instance.TryToEntangle(this))
+                EntangledVisuals.SetActive(true);
+        }
     }
 }
