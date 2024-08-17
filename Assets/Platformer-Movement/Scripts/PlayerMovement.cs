@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private bool quantumLevel;
 
-	[SerializeField] private int health;
+	public int health;
 	[SerializeField] private Slider healthSlider;
 	[SerializeField] private GameObject quantumLevelDesign;
 	[SerializeField] private GameObject nonQuantumLevelDesign;
