@@ -8,7 +8,7 @@ public class movingPlatform : MonoBehaviour
     public Transform pointB; 
     public float speed = 1.0f; 
 
-    private bool movingToB = true;
+    private bool movingToB = false;
 
     void Update()
     {
@@ -31,6 +31,22 @@ public class movingPlatform : MonoBehaviour
             {
                 movingToB = true;
             }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.transform.SetParent(this.transform);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
         }
     }
 }
