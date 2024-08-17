@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     private float fireCooldownTimer = 0;
     private Rigidbody2D rb;
 
+    [SerializeField]
+    private GameObject entanglementRangeVisualizer;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +28,14 @@ public class Player : MonoBehaviour
         fireCooldownTimer += Time.deltaTime;
 
         if (QuantumObjectsManager.instance.isInEntanglementMode)
-            return;
+        {
+            entanglementRangeVisualizer.SetActive(true);
+            return; // No firing projectiles when in entanglement mode
+        }
+        else
+        {
+            entanglementRangeVisualizer.SetActive(false);
+        }
 
         if (fireCooldownTimer >= fireCooldown)
         {
@@ -51,7 +61,6 @@ public class Player : MonoBehaviour
         Vector2 force = new Vector2(projectileLaunchVelocity * shootDirection.x, projectileLaunchVelocity * shootDirection.y);
         Vector2 ownVelocityForce = rb.velocity * rb.velocity * projectilePrefab.GetComponent<Rigidbody2D>().mass / 2;
         ownVelocityForce.x *= transform.localScale.x;
-        Debug.Log(ownVelocityForce);
         Rigidbody2D projRb = proj.GetComponent<Rigidbody2D>();
         projRb.AddRelativeForce(force + ownVelocityForce);
         projRb.AddTorque(projectileLaunchTorque);

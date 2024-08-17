@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class QuantumObjectsManager : MonoBehaviour
     public bool isInEntanglementMode { get; private set; } = false;
     [SerializeField] private GameObject entanglementUI;
     private List<QuantumObject> entangledObjects = new List<QuantumObject>();
+    [SerializeField]
+    private float entanglementRange = 20f;
+    private Player player;
 
     public enum Level { Level1, Level2, Level3, Level4, Level5, Count };
 
@@ -24,6 +28,8 @@ public class QuantumObjectsManager : MonoBehaviour
         {
             instance = this;
         }
+
+        player = FindObjectOfType<Player>();
     }
 
     private void Update()
@@ -57,6 +63,19 @@ public class QuantumObjectsManager : MonoBehaviour
     public bool TryToEntangle(QuantumObject qo)
     {
         if (!isInEntanglementMode)
+            return false;
+
+        Collider2D[] castResult = Physics2D.OverlapCircleAll(player.transform.position, entanglementRange);
+        bool found = false;
+        foreach (Collider2D collider in castResult)
+        {
+            if(collider.GetComponent<QuantumObject>() == qo)
+            {
+                found = true;
+                break;
+            }
+        }
+        if (!found)
             return false;
 
         if(entangledObjects.Count < 2 && !entangledObjects.Contains(qo))

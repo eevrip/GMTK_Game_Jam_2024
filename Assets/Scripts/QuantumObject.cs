@@ -77,7 +77,14 @@ public class QuantumObject : MonoBehaviour
         else
         {
             if (QuantumObjectsManager.instance.TryToEntangle(this))
+            {
                 EntangledVisuals.SetActive(true);
+            }
+            else
+            {
+                QuantumObjectsManager.instance.Disentangle(this);
+                EntangledVisuals.SetActive(false);
+            }
         }
     }
 }
