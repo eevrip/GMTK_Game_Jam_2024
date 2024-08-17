@@ -36,7 +36,7 @@ public class QuantumObject : MonoBehaviour
     //------------------
     //This is a temp function to see if it works. The manager.ChangeLevelOfEntangledObjs() will be called when the bullet collides with the collider of the respected quantumObj
     //----------------------------
-    public void testTempScale(int i)
+    public void ChangeLevel(int i)
     {
         manager.ChangeLevelOfEntangledObjs(this, entangledObj, i);
     }
