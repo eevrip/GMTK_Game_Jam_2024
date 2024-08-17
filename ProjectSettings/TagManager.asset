@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ScaleLevels
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private GameObject quantumLevelDesign;
 	[SerializeField] private GameObject nonQuantumLevelDesign;
 
+	public bool attacked;
+	public float attackTimer;
+
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
@@ -108,6 +111,15 @@ public class PlayerMovement : MonoBehaviour
 
 		LastPressedJumpTime -= Time.deltaTime;
 		LastPressedDashTime -= Time.deltaTime;
+
+		if (attacked)
+		{
+			attackTimer -= Time.deltaTime;
+			if(attackTimer < 0)
+			{
+				attacked = false;
+			}
+		}
 		#endregion
 
 		#region INPUT HANDLER
@@ -624,6 +636,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     #endregion
+
+    #region Collisions
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+		if (other.gameObject.CompareTag("Enemy") && !attacked)
+		{
+			health -= other.gameObject.GetComponent<hitpointValue>().hitpoints;
+			attacked = true;
+		}
+    }
+    #endregion
 }
+
+
 
 // created by Dawnosaur :D
