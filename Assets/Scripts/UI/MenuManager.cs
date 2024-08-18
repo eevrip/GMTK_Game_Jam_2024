@@ -29,7 +29,7 @@ public class MenuManager : MonoBehaviour
     public void startNewGame()
     {
         // if theres a save, ask if want to wipe all existing data
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Continue()
     {

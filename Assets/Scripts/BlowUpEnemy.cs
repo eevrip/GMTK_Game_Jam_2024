@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlowUpEnemy : MonoBehaviour
 {
@@ -27,8 +28,9 @@ public class BlowUpEnemy : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, transform.position) < 5)
         {
-            player.GetComponent<PlayerMovement>().health -= damage;
+            // Respawn
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
         }
-        Destroy(this.gameObject);
     }
 }

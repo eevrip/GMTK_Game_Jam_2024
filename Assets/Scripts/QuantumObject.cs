@@ -29,6 +29,8 @@ public class QuantumObject : MonoBehaviour
     private GameObject EntangledVisuals;
     [SerializeField]
     private GameObject entanglementParticleSystem;
+    [SerializeField]
+    private bool isNaturallyEntangled = false;
 
     private Rigidbody2D rb;
 
@@ -50,6 +52,8 @@ public class QuantumObject : MonoBehaviour
         manager = QuantumObjectsManager.instance;
         rb = GetComponent<Rigidbody2D>();
 
+        isNaturallyEntangled = (entangledObj != null);
+
         //Set the correct scale of the object
         float scaleXY = manager.LvlScale(currScaleLvl);
         transform.localScale = new Vector3(scaleXY * scalingFactor, scaleXY * scalingFactor, 1f);
@@ -69,7 +73,7 @@ public class QuantumObject : MonoBehaviour
             entanglementParticleSystem.transform.position = new Vector3(transform.position.x, transform.position.y, -2);   // Push the particle system a bit infront of everything on z axis
             entanglementParticleSystem.transform.rotation = Quaternion.LookRotation(dir);
         }
-        if (QuantumObjectsManager.instance.entangledObjects.Contains(this))
+        if (QuantumObjectsManager.instance.entangledObjects.Contains(this) || isNaturallyEntangled)
         {
             EntangledVisuals.SetActive(true);
         }
@@ -120,7 +124,9 @@ public class QuantumObject : MonoBehaviour
 
     public void OnMouseDown()
     {
-        
+        if (isNaturallyEntangled)
+            return;
+
         if (entangledObj)
         {
             QuantumObjectsManager.instance.Disentangle(this);

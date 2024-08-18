@@ -8,6 +8,7 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -19,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private bool quantumLevel;
 
-	public int health;
-	[SerializeField] private Slider healthSlider;
 	[SerializeField] private GameObject quantumLevelDesign;
 	[SerializeField] private GameObject nonQuantumLevelDesign;
 
@@ -305,9 +304,6 @@ public class PlayerMovement : MonoBehaviour
         }
         #endregion
 
-        #region Health
-		healthSlider.value = health;
-        #endregion
     }
 
     private void FixedUpdate()
@@ -642,8 +638,11 @@ public class PlayerMovement : MonoBehaviour
     {
 		if (other.gameObject.CompareTag("Enemy") && !attacked)
 		{
-			health -= other.gameObject.GetComponent<hitpointValue>().hitpoints;
-			attacked = true;
+            attacked = true;
+
+			// Respawn
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
 		}
     }
     #endregion
