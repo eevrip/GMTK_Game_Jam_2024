@@ -18,9 +18,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject entanglementRangeVisualizer;
 
+    private Vector2 lastCheckpoint;
+    public Vector2 LastCheckpoint { get { return lastCheckpoint; } set {  lastCheckpoint = value; } }
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        lastCheckpoint = transform.position;
     }
 
     void Update()
@@ -50,6 +54,15 @@ public class Player : MonoBehaviour
         }
     }
 
+    public bool ResetPosition()
+    {
+        if (lastCheckpoint != null)
+        {
+            transform.position = lastCheckpoint;
+            return true;
+        }
+        return false;
+    }
     void FireProjectile(GameObject projectilePrefab)
     {
         Vector3 shootPos = transform.position + new Vector3(launchOffset.x * transform.localScale.x, launchOffset.y, launchOffset.z);

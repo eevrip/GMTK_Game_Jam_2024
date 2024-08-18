@@ -138,10 +138,10 @@ public class PlayerMovement : MonoBehaviour
 			OnJumpUpInput();
 		}
 
-		if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
-		{
-			OnDashInput();
-		}
+		//if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
+		//{
+		//	OnDashInput();
+		//}
 		#endregion
 
 		#region COLLISION CHECKS

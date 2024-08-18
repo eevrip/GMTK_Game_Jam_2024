@@ -10,9 +10,15 @@ public class resetLevel : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player"))
         {
-            Scene currentScene = SceneManager.GetActiveScene();
+            Player player = other.gameObject.GetComponent<Player>();
+            //If the player has not pas a checkpoint yet reset the scene
+            if (!player.ResetPosition())
+            {
 
-            SceneManager.LoadScene(currentScene.name);
+                Scene currentScene = SceneManager.GetActiveScene();
+
+                SceneManager.LoadScene(currentScene.name);
+            }
         }
     }
 }
