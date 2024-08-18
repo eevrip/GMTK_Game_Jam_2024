@@ -7,7 +7,7 @@ public class resetLevel : MonoBehaviour
 {
     public void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other.gameObject.tag);
+        
         if (other.gameObject.CompareTag("Player"))
         {
             Scene currentScene = SceneManager.GetActiveScene();

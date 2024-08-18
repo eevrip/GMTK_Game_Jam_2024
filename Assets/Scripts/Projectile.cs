@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
 		if (hasCollided)
 			return;
 
-		Debug.Log("Collision!");
+		//Debug.Log("Collision!");
 		QuantumObject qo = collision.gameObject.GetComponent<QuantumObject>();
 		if (qo)
 		{

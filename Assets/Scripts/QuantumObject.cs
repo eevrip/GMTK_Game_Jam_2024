@@ -10,6 +10,16 @@ public class QuantumObject : MonoBehaviour
     public QuantumObject entangledObj;
 
     private QuantumObjectsManager manager;
+    [SerializeField]
+    [Min(1f)]
+    private float scalingFactor;
+    [SerializeField]
+    private QuantumObjectsManager.Level minScaleLvl;
+
+    [SerializeField]
+    
+    private QuantumObjectsManager.Level maxScaleLvl = QuantumObjectsManager.Level.Level5;
+
 
     [SerializeField]
     private QuantumObjectsManager.Level startingScaleLvl;
@@ -20,14 +30,34 @@ public class QuantumObject : MonoBehaviour
     [SerializeField]
     private GameObject entanglementParticleSystem;
 
+    private Rigidbody2D rb;
+
+    [SerializeField]
+    private bool canBeMoved;
+
     private void Start()
     {
+        if (startingScaleLvl > maxScaleLvl) 
+        {
+            startingScaleLvl = maxScaleLvl;
+        }
+        else if(startingScaleLvl < minScaleLvl)
+        {
+            startingScaleLvl = minScaleLvl;
+        }
+        
         currScaleLvl = startingScaleLvl;
         manager = QuantumObjectsManager.instance;
+        rb = GetComponent<Rigidbody2D>();
 
         //Set the correct scale of the object
         float scaleXY = manager.LvlScale(currScaleLvl);
-        transform.localScale = new Vector3(scaleXY, scaleXY, 1f);
+        transform.localScale = new Vector3(scaleXY * scalingFactor, scaleXY * scalingFactor, 1f);
+        if (canBeMoved)
+        {
+            float currMass = manager.MassScale(currScaleLvl);
+            rb.mass = currMass;
+        }
     }
 
     private void Update()
@@ -68,17 +98,21 @@ public class QuantumObject : MonoBehaviour
             currScaleLvl++;
 
         float scaleXY = manager.LvlScale(currScaleLvl);
-        transform.localScale = new Vector3(scaleXY, scaleXY, 1f);
-        
+        transform.localScale = new Vector3(scaleXY*scalingFactor, scaleXY*scalingFactor, 1f);
+        if (canBeMoved)
+        {
+            float currMass = manager.MassScale(currScaleLvl);
+            rb.mass = currMass;
+        }
     }
 
     //If reach min scale level return -1, if reach max scale level return 1
     public int ReachBoundary()
     {
 
-        if (currScaleLvl == QuantumObjectsManager.Level.Level1)
+        if (currScaleLvl == minScaleLvl)
             return -1;
-        else if (currScaleLvl == (QuantumObjectsManager.Level.Count - 1))
+        else if (currScaleLvl == maxScaleLvl)
             return 1;
         else
             return 0;
@@ -86,6 +120,7 @@ public class QuantumObject : MonoBehaviour
 
     public void OnMouseDown()
     {
+        
         if (entangledObj)
         {
             QuantumObjectsManager.instance.Disentangle(this);

@@ -9,6 +9,8 @@ public class QuantumObjectsManager : MonoBehaviour
     public static QuantumObjectsManager instance;
     [SerializeField]
     private float[] sclLvls = new float[(int)Level.Count];
+    [SerializeField]
+    private float[] massLvls = new float[(int)Level.Count];
     public bool isInEntanglementMode { get; private set; } = false;
     [SerializeField]
     private GameObject entanglementUI;
@@ -62,6 +64,10 @@ public class QuantumObjectsManager : MonoBehaviour
     public float LvlScale(Level lvl)
     {
         return sclLvls[(int)lvl];
+    }
+    public float MassScale(Level lvl)
+    {
+        return massLvls[(int)lvl];
     }
 
     public bool TryToEntangle(QuantumObject qo)
