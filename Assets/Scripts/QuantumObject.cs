@@ -17,6 +17,8 @@ public class QuantumObject : MonoBehaviour
     private QuantumObjectsManager.Level currScaleLvl;
     [SerializeField]
     private GameObject EntangledVisuals;
+    [SerializeField]
+    private GameObject entanglementParticleSystem;
 
     private void Start()
     {
@@ -28,7 +30,26 @@ public class QuantumObject : MonoBehaviour
         transform.localScale = new Vector3(scaleXY, scaleXY, 1f);
     }
 
-    
+    private void Update()
+    {
+        if (entangledObj)
+        {
+            // Visuals
+            Vector3 dir = entangledObj.transform.position - transform.position;
+            entanglementParticleSystem.transform.position = new Vector3(transform.position.x, transform.position.y, -2);   // Push the particle system a bit infront of everything on z axis
+            entanglementParticleSystem.transform.rotation = Quaternion.LookRotation(dir);
+        }
+        if (QuantumObjectsManager.instance.entangledObjects.Contains(this))
+        {
+            EntangledVisuals.SetActive(true);
+        }
+        else
+        {
+            EntangledVisuals.SetActive(false);
+        }
+
+    }
+
     public bool CanChangeScaleLevel(int i)
     {
         if (i < 0 && ReachBoundary() == -1)
@@ -67,24 +88,12 @@ public class QuantumObject : MonoBehaviour
     {
         if (entangledObj)
         {
-            QuantumObject saveEntangledObjRef = entangledObj;
-            if (QuantumObjectsManager.instance.Disentangle(this))
-            {
-                EntangledVisuals.SetActive(false);
-                saveEntangledObjRef.EntangledVisuals.SetActive(false);
-            }
+            QuantumObjectsManager.instance.Disentangle(this);
         }
         else
         {
-            if (QuantumObjectsManager.instance.TryToEntangle(this))
-            {
-                EntangledVisuals.SetActive(true);
-            }
-            else
-            {
+            if (!QuantumObjectsManager.instance.TryToEntangle(this))
                 QuantumObjectsManager.instance.Disentangle(this);
-                EntangledVisuals.SetActive(false);
-            }
         }
     }
 }

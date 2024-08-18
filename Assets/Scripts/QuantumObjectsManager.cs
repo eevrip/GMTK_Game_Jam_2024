@@ -10,11 +10,14 @@ public class QuantumObjectsManager : MonoBehaviour
     [SerializeField]
     private float[] sclLvls = new float[(int)Level.Count];
     public bool isInEntanglementMode { get; private set; } = false;
-    [SerializeField] private GameObject entanglementUI;
-    private List<QuantumObject> entangledObjects = new List<QuantumObject>();
+    [SerializeField]
+    private GameObject entanglementUI;
+    public List<QuantumObject> entangledObjects { get; private set; } = new List<QuantumObject>();
     [SerializeField]
     private float entanglementRange = 20f;
     private Player player;
+    [SerializeField]
+    private GameObject entanglementParticleSystemPlayer;
 
     public enum Level { Level1, Level2, Level3, Level4, Level5, Count };
 
@@ -30,6 +33,7 @@ public class QuantumObjectsManager : MonoBehaviour
         }
 
         player = FindObjectOfType<Player>();
+
     }
 
     private void Update()
@@ -86,6 +90,10 @@ public class QuantumObjectsManager : MonoBehaviour
                 entangledObjects[0].entangledObj = qo;
                 Debug.Log("Entangled " + qo.gameObject + " and " + entangledObjects[0]);
             }
+
+            Vector3 posPSPlayer = new Vector3(player.transform.position.x, player.transform.position.y, -2);   // Push the particle system a bit infront of everything on z axis
+            Instantiate(entanglementParticleSystemPlayer, posPSPlayer, Quaternion.LookRotation(qo.transform.position - player.transform.position));
+
             entangledObjects.Add(qo);
             return true;
         }
@@ -97,16 +105,27 @@ public class QuantumObjectsManager : MonoBehaviour
         if (!isInEntanglementMode)
             return false;
 
-        if (qo.entangledObj)
+        //if (qo.entangledObj)
+        //{
+        //    Debug.Log("Disentangled " + qo.gameObject + " and " + qo.entangledObj.gameObject);
+        //    qo.entangledObj.entangledObj = null;
+        //}
+        //else
+        //{
+        //    Debug.Log("Disentangled " + qo.gameObject);
+        //}
+        //qo.entangledObj = null;
+
+        foreach (var obj in entangledObjects)
         {
-            Debug.Log("Disentangled " + qo.gameObject + " and " + qo.entangledObj.gameObject);
-            qo.entangledObj.entangledObj = null;
+            if (obj.entangledObj != null)
+            {
+                Debug.Log("Disentangled " + obj.gameObject + " and " + obj.entangledObj.gameObject);
+                obj.entangledObj.entangledObj = null;
+            }
+            else Debug.Log("Disentangled " + obj.gameObject);
+            obj.entangledObj = null;
         }
-        else
-        {
-            Debug.Log("Disentangled " + qo.gameObject);
-        }
-        qo.entangledObj = null;
         entangledObjects.Clear();
         return true;
     }

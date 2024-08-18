@@ -135,6 +135,7 @@ MonoBehaviour:
   entangledObj: {fileID: 0}
   startingScaleLvl: 0
   EntangledVisuals: {fileID: 4881719855463717573}
+  entanglementParticleSystem: {fileID: 8262964139004578418}
 --- !u!61 &7231732800516226096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -236,7 +237,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0354, y: 1.0354, z: 1.0354}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2584382599439463512}
   m_Father: {fileID: 7722336265176941821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3477120206327178840
@@ -291,3 +293,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1384889847494303892
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5650453741352374407}
+    m_Modifications:
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.343
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031227190450170598, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+      propertyPath: m_Name
+      value: Entanglement Particle System
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+--- !u!4 &2584382599439463512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3523380280431432908, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+  m_PrefabInstance: {fileID: 1384889847494303892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8262964139004578418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7031227190450170598, guid: fdf5e982a52665248b12694dd736f489, type: 3}
+  m_PrefabInstance: {fileID: 1384889847494303892}
+  m_PrefabAsset: {fileID: 0}
