@@ -11,17 +11,11 @@ public class buttonController : MonoBehaviour
     public GameObject player;
 
     public bool affectsPlayer;
-    public GameObject bridge;
-    void Start()
-    {
-        
-    }
+    public GameObject item;
+    public enum ActivationItem { Bridge, MovingPlatform, Door};
 
-    void Update()
-    {
-        
-    }
-
+    [SerializeField]
+    private ActivationItem activationItem;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (affectsPlayer)
@@ -39,7 +33,8 @@ public class buttonController : MonoBehaviour
         }
         else
         {
-            bridge.SetActive(true);
+           if(item)
+                item.SetActive(true);
         }
         
     }

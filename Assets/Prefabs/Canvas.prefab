@@ -2123,15 +2123,15 @@ MonoBehaviour:
   sclLvls:
   - 1
   - 2
-  - 3
-  - 4
-  - 5
+  - 6
+  - 24
+  - 120
   massLvls:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 50
+  - 100
+  - 1000
+  - 10000
+  - 100000
   entanglementUI: {fileID: 1049372335832494629}
   entanglementRange: 10
   entanglementParticleSystemPlayer: {fileID: 6266387782963974784, guid: 86b15a9750225334899f88d718661b47, type: 3}

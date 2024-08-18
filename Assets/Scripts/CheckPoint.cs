@@ -12,8 +12,8 @@ public class CheckPoint : MonoBehaviour
         {
             if(collision.transform.tag == "Player")
             {
-                Player pl = collision.gameObject.GetComponent<Player>();
-                pl.LastCheckpoint = transform.position;
+                
+                Player.LastCheckpoint = transform.position;
             }
         }
     }

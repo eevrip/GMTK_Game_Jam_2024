@@ -11,8 +11,11 @@ public class QuantumObject : MonoBehaviour
 
     private QuantumObjectsManager manager;
     [SerializeField]
-    [Min(1f)]
+    [Min(0.001f)]
     private float scalingFactor;
+    [SerializeField]
+    [Min(0.00001f)]
+    private float massFactor;
     [SerializeField]
     private QuantumObjectsManager.Level minScaleLvl;
 
@@ -60,7 +63,7 @@ public class QuantumObject : MonoBehaviour
         if (canBeMoved)
         {
             float currMass = manager.MassScale(currScaleLvl);
-            rb.mass = currMass;
+            rb.mass = currMass*massFactor;
         }
     }
 
@@ -106,7 +109,7 @@ public class QuantumObject : MonoBehaviour
         if (canBeMoved)
         {
             float currMass = manager.MassScale(currScaleLvl);
-            rb.mass = currMass;
+            rb.mass = currMass*massFactor;
         }
     }
 

@@ -18,19 +18,28 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject entanglementRangeVisualizer;
 
-    private Vector2 lastCheckpoint;
-    public Vector2 LastCheckpoint { get { return lastCheckpoint; } set {  lastCheckpoint = value; } }
+    private static Vector2 lastCheckpoint;
+    public static Vector2 LastCheckpoint { get { return lastCheckpoint; } set {  lastCheckpoint = value; } }
 
     [SerializeField]
     private GameObject timTheTardigradePrefab;
 
     void Awake()
     {
+        
         rb = GetComponent<Rigidbody2D>();
-        lastCheckpoint = transform.position;
+        //lastCheckpoint = transform.position;
 
         GameObject tim = Instantiate(timTheTardigradePrefab);
         tim.transform.position = transform.position + tim.GetComponent<TimTheTardigrade>().timsDesiredOffset;
+        if(lastCheckpoint != null)
+        {
+            ResetPosition(lastCheckpoint);
+        }
+        
+     
+        
+        
     }
 
     void Update()
@@ -60,14 +69,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    public bool ResetPosition()
+    public void ResetPosition(Vector2 checkpoint)
     {
-        if (lastCheckpoint != null)
-        {
-            transform.position = lastCheckpoint;
-            return true;
-        }
-        return false;
+       
+       
+       
+        transform.position = checkpoint;
+        
+       
     }
     void FireProjectile(GameObject projectilePrefab)
     {
