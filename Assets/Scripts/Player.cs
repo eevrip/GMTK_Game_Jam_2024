@@ -43,11 +43,11 @@ public class Player : MonoBehaviour
 
         if (fireCooldownTimer >= fireCooldown)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire2"))
             {
                 FireProjectile(growProjectilePrefab);
             }
-            else if (Input.GetButtonDown("Fire2"))
+            else if (Input.GetButtonDown("Fire1"))
             {
                 FireProjectile(shrikProjectilePrefab);
             }

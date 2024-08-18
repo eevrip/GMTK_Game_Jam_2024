@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.36725703, g: 0.58127934, b: 0.5943396, a: 1}
   m_FlipX: 0
@@ -133,9 +133,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entangledObj: {fileID: 0}
+  scalingFactor: 0
+  minScaleLvl: 0
+  maxScaleLvl: 4
   startingScaleLvl: 0
   EntangledVisuals: {fileID: 4881719855463717573}
   entanglementParticleSystem: {fileID: 8262964139004578418}
+  isNaturallyEntangled: 0
+  canBeMoved: 0
 --- !u!61 &7231732800516226096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -281,7 +286,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0.06252861, a: 1}
   m_FlipX: 0

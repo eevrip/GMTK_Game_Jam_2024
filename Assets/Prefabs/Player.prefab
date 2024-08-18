@@ -413,8 +413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: cd22bd7f1a0806546984803f1cdd8e6f, type: 2}
   quantumLevel: 0
-  health: 0
-  healthSlider: {fileID: 0}
   quantumLevelDesign: {fileID: 0}
   nonQuantumLevelDesign: {fileID: 0}
   attacked: 0
