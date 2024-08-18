@@ -462,6 +462,7 @@ MonoBehaviour:
   launchOffset: {x: 1, y: 0.25, z: 0}
   fireCooldown: 0.2
   entanglementRangeVisualizer: {fileID: 1418448899855207749}
+  timTheTardigradePrefab: {fileID: 1533784213210405305, guid: 97ea4b3cb3dc6ee449cdc894e69e9cef, type: 3}
 --- !u!1 &8371689183173391842
 GameObject:
   m_ObjectHideFlags: 0

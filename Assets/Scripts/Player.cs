@@ -21,10 +21,16 @@ public class Player : MonoBehaviour
     private Vector2 lastCheckpoint;
     public Vector2 LastCheckpoint { get { return lastCheckpoint; } set {  lastCheckpoint = value; } }
 
+    [SerializeField]
+    private GameObject timTheTardigradePrefab;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         lastCheckpoint = transform.position;
+
+        GameObject tim = Instantiate(timTheTardigradePrefab);
+        tim.transform.position = transform.position + tim.GetComponent<TimTheTardigrade>().timsDesiredOffset;
     }
 
     void Update()
