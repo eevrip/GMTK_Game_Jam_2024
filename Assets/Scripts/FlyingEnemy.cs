@@ -33,28 +33,28 @@ public class FlyingEnemy : MonoBehaviour
 
         float step = speed * Time.deltaTime;
 
-        if (!attackingPlayer)
+        
+        
+        if (movingToB)
         {
-            if (movingToB)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, pointB.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, pointB.position, step);
 
-                if (Vector3.Distance(transform.position, pointB.position) < 0.001f)
-                {
-                    movingToB = false;
-                }
-            }
-            else
+            if (Vector3.Distance(transform.position, pointB.position) < 0.001f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, pointA.position, step);
-
-                if (Vector3.Distance(transform.position, pointA.position) < 0.001f)
-                {
-                    movingToB = true;
-                }
+                movingToB = false;
             }
         }
         else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, pointA.position, step);
+
+            if (Vector3.Distance(transform.position, pointA.position) < 0.001f)
+            {
+                movingToB = true;
+            }
+        }
+        
+        if(attackingPlayer)
         {
             // Aim at the player
             Vector3 direction = (player.transform.position - firepoint.position).normalized;
