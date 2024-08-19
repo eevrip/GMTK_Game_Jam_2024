@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4cbdf309976b1c446b218eae84955a72
+guid: 73d80e556f8b58e4b8bae513c106250c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: running_right_0000-sheet_0
+      name: dying_left_0
       rect:
         serializedVersion: 2
-        x: 180
-        y: 93
-        width: 590
-        height: 831
+        x: 378
+        y: 408
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 814fb49a989d0f74fa6d36b32974c576
-      internalID: -1663766984
+      spriteID: df20e62c368e1154b96151c88fcaf1f0
+      internalID: 933259053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: running_right_0000-sheet_1
+      name: dying_left_1
       rect:
         serializedVersion: 2
-        x: 1199
-        y: 75
-        width: 539
-        height: 835
+        x: 393
+        y: 80
+        width: 404
+        height: 890
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b54d2ea5315e62746a2a567690c5da68
-      internalID: -1800175109
+      spriteID: 4742dfdf7250f8a4ebd358edc546ac09
+      internalID: 1526998489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: running_right_0000-sheet_2
+      name: dying_left_2
       rect:
         serializedVersion: 2
-        x: 2256
-        y: 79
-        width: 514
-        height: 912
+        x: 1418
+        y: 57
+        width: 399
+        height: 909
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2b7ef0e341d1ff4590d9c37443c9c2c
-      internalID: -420108143
+      spriteID: a6d42461d594894419ad8bb235613a9c
+      internalID: -710057495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: running_right_0000-sheet_3
+      name: dying_left_3
       rect:
         serializedVersion: 2
-        x: 3236
-        y: 96
-        width: 630
-        height: 891
+        x: 2373
+        y: 62
+        width: 399
+        height: 890
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58569d9058b9ebe478b6c6972ebd3f6c
-      internalID: 174297525
+      spriteID: 5f48b09229ee92c4386af97ced433910
+      internalID: -358583574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: running_right_0000-sheet_4
+      name: dying_left_4
       rect:
         serializedVersion: 2
-        x: 4234
-        y: 61
-        width: 615
-        height: 881
+        x: 3268
+        y: 122
+        width: 624
+        height: 880
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f79b877815961e84db00ebf1c6518553
-      internalID: -2110208713
+      spriteID: e60dc5f74d00ee048a613ee12325969a
+      internalID: 784809848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: running_right_0000-sheet_5
+      name: dying_left_5
       rect:
         serializedVersion: 2
-        x: 5308
-        y: 51
-        width: 553
-        height: 898
+        x: 4268
+        y: 0
+        width: 719
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c21187cd26c6e584e843246285b30570
-      internalID: -29270288
+      spriteID: 0b9c58cb27fcb314ea3dcb4640ac0a24
+      internalID: 980075168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: running_right_0000-sheet_6
+      name: dying_left_6
       rect:
         serializedVersion: 2
-        x: 6312
-        y: 145
-        width: 700
-        height: 804
+        x: 5303
+        y: 158
+        width: 659
+        height: 723
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +263,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04d4edcb8edb79a44b7da18556cef547
-      internalID: -833677463
+      spriteID: 5cb3f679714a11e4fad02e6b2b053d11
+      internalID: -1667536817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying_left_7
+      rect:
+        serializedVersion: 2
+        x: 6328
+        y: 62
+        width: 659
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203aefec8be2cbf46a215bd4b7a6cc42
+      internalID: 933298327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying_left_8
+      rect:
+        serializedVersion: 2
+        x: 7298
+        y: 13
+        width: 729
+        height: 629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2962ee659f7c8f0469ca425864ad47a5
+      internalID: 1398442539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying_left_9
+      rect:
+        serializedVersion: 2
+        x: 8293
+        y: 13
+        width: 809
+        height: 669
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cde03f136a76cd42b737eece143001c
+      internalID: -1681500601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying_left_10
+      rect:
+        serializedVersion: 2
+        x: 9408
+        y: 17
+        width: 669
+        height: 669
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04b0763a41978b449d4ac7229f5d219
+      internalID: -2064588002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying_left_11
+      rect:
+        serializedVersion: 2
+        x: 9114
+        y: 283
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f175b42a8e0484f81179a148053990
+      internalID: -1275253570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying_left_12
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 60
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fe2139056ebbb44ad2d5d86bfcdabd
+      internalID: -638908114
       vertices: []
       indices: 
       edges: []
@@ -267,13 +406,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      running_right_0000-sheet_0: -1663766984
-      running_right_0000-sheet_1: -1800175109
-      running_right_0000-sheet_2: -420108143
-      running_right_0000-sheet_3: 174297525
-      running_right_0000-sheet_4: -2110208713
-      running_right_0000-sheet_5: -29270288
-      running_right_0000-sheet_6: -833677463
+      dying_left_0: 933259053
+      dying_left_1: 1526998489
+      dying_left_10: -2064588002
+      dying_left_11: -1275253570
+      dying_left_12: -638908114
+      dying_left_2: -710057495
+      dying_left_3: -358583574
+      dying_left_4: 784809848
+      dying_left_5: 980075168
+      dying_left_6: -1667536817
+      dying_left_7: 933298327
+      dying_left_8: 1398442539
+      dying_left_9: -1681500601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
