@@ -14578,6 +14578,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 77.29771
+      objectReference: {fileID: 0}
     - target: {fileID: 1483874211528204841, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -14585,6 +14593,18 @@ PrefabInstance:
     - target: {fileID: 1483874211528204841, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145105382848154393, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145105382848154393, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145105382848154393, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2308310558451835352, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14689,6 +14709,18 @@ PrefabInstance:
     - target: {fileID: 3203835679817461913, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: audioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589531424445482613, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589531424445482613, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589531424445482613, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359940196589448763, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14940,7 +14972,7 @@ Transform:
   m_GameObject: {fileID: 336071575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10519695, y: 0.5752878, z: -10}
+  m_LocalPosition: {x: 0.1204977, y: 0.5752883, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30468,6 +30500,7 @@ GameObject:
   - component: {fileID: 1605598511}
   - component: {fileID: 1605598510}
   - component: {fileID: 1605598512}
+  - component: {fileID: 1605598513}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -30547,6 +30580,21 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1960554011}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &1605598513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605598509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Offset: {x: 10, y: 0, z: 0}
+  m_ApplyAfter: 1
+  m_PreserveComposition: 0
 --- !u!1 &1607237840
 GameObject:
   m_ObjectHideFlags: 0
@@ -31133,7 +31181,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -32546,6 +32594,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2246853015937302732, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1605598509}
     - target: {fileID: 2246853015937302732, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
       propertyPath: health
       value: 10
