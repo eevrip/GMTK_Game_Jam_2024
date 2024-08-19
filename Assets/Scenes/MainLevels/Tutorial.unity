@@ -14578,6 +14578,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 77.29868
+      objectReference: {fileID: 0}
     - target: {fileID: 1483874211528204841, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -14689,6 +14697,18 @@ PrefabInstance:
     - target: {fileID: 3203835679817461913, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: audioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589531424445482613, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589531424445482613, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589531424445482613, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359940196589448763, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14940,7 +14960,7 @@ Transform:
   m_GameObject: {fileID: 336071575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10519695, y: 0.5752878, z: -10}
+  m_LocalPosition: {x: 1.4182501, y: 0.5752878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32546,6 +32566,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1783766166700139588, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+      propertyPath: canUseGrowProjectile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2246853015937302732, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
       propertyPath: health
       value: 10
