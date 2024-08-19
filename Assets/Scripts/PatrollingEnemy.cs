@@ -19,7 +19,7 @@ public class PatrollingEnemy : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.transform.position) < 10f)
         {
-            attackingPlayer = true;
+           // attackingPlayer = true;
         }
         else
         {
@@ -51,7 +51,7 @@ public class PatrollingEnemy : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+            //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         }
         
     }
