@@ -18,13 +18,31 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Button continueButton;
     private bool saveFound;
 
+    public GameObject Manager;
+    public bool[] levels;
+    public Button[] levelButtons;
 
     private void Start()
     {
-        if (!saveFound)
+        Manager = GameObject.FindGameObjectWithTag("Manager");
+        levels = new bool[3];
+        levels = Manager.GetComponent<manager>().levels;
+
+        for (int i = 0; i < levels.Length; i++)
         {
-            continueButton.interactable = false;
+            if (!levels[i])
+            {
+                currentLevel = i;
+                break;
+            }
+            
         }
+
+        if (currentLevel > 0)
+        {
+            continueButton.interactable = true;
+        }
+
     }
     public void startNewGame()
     {
@@ -33,7 +51,7 @@ public class MenuManager : MonoBehaviour
     }
     public void Continue()
     {
-        SceneManager.LoadScene(currentLevel);
+        SceneManager.LoadScene(currentLevel+1);
     }
 
     public void loadLevel(int levelNum)
@@ -53,6 +71,22 @@ public class MenuManager : MonoBehaviour
         MainScreen.SetActive(false);
         SettingsScreen.SetActive(false);
         LevelsScreen.SetActive(true);
+
+        for (int i = 0; i < levelButtons.Length-1; i++)
+        {
+            if (!levels[0])
+            {
+                levelButtons[0].interactable = true;
+                break;
+            }
+            else if (levels[i])
+            {
+                levelButtons[i].interactable = true;
+                levelButtons[i+1].interactable = true;
+            }
+        }
+        // if level 1 is not complete, only level 1 can be intereactable
+        // if level 1 is complete then level 2 can be interactable
     }
 
     public void backButton()

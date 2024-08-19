@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class manager : MonoBehaviour
 {
-
+    [Header("Audio")]
     public float mainVolume;
     public float sfxVolume;
     public float musicVolume;
@@ -25,6 +25,9 @@ public class manager : MonoBehaviour
 
     public bool loadAudioLevels;
 
+    [Header("Save System")]
+    public bool[] levels;
+
     void Awake()
     {
         if (instance == null)
@@ -37,6 +40,7 @@ public class manager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        LoadManager();
     }
 
     void OnDestroy()
@@ -124,5 +128,16 @@ public class manager : MonoBehaviour
         loadAudioLevels = true;
     }
 
-    
+    public void SaveManager()
+    {
+        SaveSystem.SaveManager(this);
+    }
+    public void LoadManager()
+    {
+        LevelData data = SaveSystem.LoadManager();
+
+        levels[0] = data.levels[0];
+        levels[1] = data.levels[1];
+        levels[2] = data.levels[2];
+    }
 }

@@ -34517,6 +34517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalToNextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 7252916766642789223, guid: 142542ebd4da6104c8b657ac1d82b355, type: 3}
+      propertyPath: levelNum
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
