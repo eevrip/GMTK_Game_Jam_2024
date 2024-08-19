@@ -135,4 +135,10 @@ public class QuantumObjectsManager : MonoBehaviour
         entangledObjects.Clear();
         return true;
     }
+
+    public void DisentangleNaturalObj(QuantumObject qo)
+    {
+        qo.entangledObj = null;
+        qo.isNaturallyEntangled = false;
+    }
 }

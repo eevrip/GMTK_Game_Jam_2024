@@ -35,6 +35,7 @@ public class MenuManager : MonoBehaviour
                 currentLevel = i;
                 break;
             }
+            currentLevel = levels.Length - 1;
             
         }
 
