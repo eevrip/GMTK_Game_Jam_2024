@@ -148,7 +148,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.18176842, y: 0}
@@ -182,7 +182,8 @@ MonoBehaviour:
   minSize: -1
   player: {fileID: 0}
   affectsPlayer: 0
-  bridge: {fileID: 0}
+  item: {fileID: 0}
+  activationItem: 0
 --- !u!1 &5219162417991858378
 GameObject:
   m_ObjectHideFlags: 0
