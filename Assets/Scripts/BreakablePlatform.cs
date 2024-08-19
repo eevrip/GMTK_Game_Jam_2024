@@ -21,11 +21,13 @@ public class BreakablePlatform : MonoBehaviour
             Vector2 relDir = other.gameObject.transform.position - this.transform.position;
             Vector2 relDirNor = relDir.normalized;
             
-            float angle = Vector3.Dot(-Vector2.up, relDirNor);
+            float angleVer = Mathf.Abs(Vector3.Dot(Vector2.up, relDirNor));
+            float angleHor = Mathf.Abs(Vector3.Dot(Vector2.right, relDirNor));
             float angleOffset = 0.1f;
 
             if (forceVal > breakingPoint
-                || (otherRb.mass > breakingPoint && Mathf.Abs(1-angle)<angleOffset))
+                || (otherRb.mass > breakingPoint && Mathf.Abs(1-angleVer)<angleOffset) 
+                || (otherRb.mass > breakingPoint && Mathf.Abs(1 - angleHor) < angleOffset))
                 Destroy(gameObject);
             }
         
