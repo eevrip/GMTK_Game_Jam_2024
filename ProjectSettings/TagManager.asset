@@ -11,6 +11,7 @@ TagManager:
   - Manager
   - respawnBorder
   - Tim
+  - Ground
   layers:
   - Default
   - TransparentFX

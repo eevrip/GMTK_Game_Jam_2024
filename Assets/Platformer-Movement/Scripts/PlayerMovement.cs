@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _dashRefilling;
     private Vector2 _lastDashDir;
     private bool _isDashAttacking;
+    public bool grounded;
 
     #endregion
 
@@ -141,23 +142,29 @@ public class PlayerMovement : MonoBehaviour
         #endregion
 
         #region INPUT HANDLER
-        _moveInput.x = Input.GetAxisRaw("Horizontal");
-        _moveInput.y = Input.GetAxisRaw("Vertical");
+        
         if (!attacked)
         {
-            
+            _moveInput.x = Input.GetAxisRaw("Horizontal");
+            _moveInput.y = Input.GetAxisRaw("Vertical");
             if (_moveInput.x != 0)
             {
                 CheckDirectionToFace(_moveInput.x > 0);
                 disableAnims();
                 if (IsFacingRight)
                 {
-                    anim.SetBool("runningR", true);
+                    if (grounded)
+                    {
+                        anim.SetBool("runningR", true);
+                    }                    
                     targetOffset = new Vector3(10, 0, 0);
                 }
                 else
                 {
-                    anim.SetBool("runningL", true);
+                    if (grounded)
+                    {
+                        anim.SetBool("runningL", true);
+                    }                                           
                     targetOffset = new Vector3(-10, 0, 0);
                 }
 
@@ -172,27 +179,35 @@ public class PlayerMovement : MonoBehaviour
                 disableAnims();
                 if (IsFacingRight)
                 {
-                    anim.SetBool("idleR", true);
+                    if (grounded)
+                    {
+                        anim.SetBool("idleR", true);
+                    }
                 }
                 else
                 {
-                    anim.SetBool("idleL", true);
+                    if (grounded)
+                    {
+                        anim.SetBool("idleL", true);
+                    }
                 }
                 stopFootsteps();
             }
             cameraOffset.m_Offset = Vector3.SmoothDamp(cameraOffset.m_Offset, targetOffset, ref currentVelocity, smoothTime);
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                OnJumpInput();
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                OnJumpUpInput();
+            }
         }
             
 
-		if(Input.GetKeyDown(KeyCode.Space))
-        {
-            OnJumpInput();
-        }
-
-		if (Input.GetKeyUp(KeyCode.Space))
-		{
-			OnJumpUpInput();
-		}
+		
 
         //if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
         //{
@@ -497,6 +512,17 @@ public class PlayerMovement : MonoBehaviour
         //Ensures we can't call Jump multiple times from one press
         LastPressedJumpTime = 0;
         LastOnGroundTime = 0;
+        grounded = false;
+        disableAnims();
+        if (IsFacingRight)
+        {
+            anim.SetBool("jumpR", true);
+        }
+        else
+        {
+            anim.SetBool("jumpL", true);
+        }
+        
         playJump();
 
         #region Perform Jump
@@ -707,6 +733,10 @@ public class PlayerMovement : MonoBehaviour
             }
             StartCoroutine(respawning());
         }
+        else if (other.gameObject.CompareTag("Ground"))
+        {
+            grounded = true;
+        }
     }
 
     public IEnumerator respawning()
@@ -721,6 +751,8 @@ public class PlayerMovement : MonoBehaviour
     #region ANIMATIONS
     public void disableAnims()
     {
+        anim.SetBool("jumpR", false);
+        anim.SetBool("jumpL", false);
         anim.SetBool("dyingL", false);
         anim.SetBool("dyingR", false);
         anim.SetBool("runningR", false);
