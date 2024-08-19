@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     private CinemachineCameraOffset cameraOffset;
     public Vector3 targetOffset;
 
+    public GameObject Manager;
+
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -119,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
         IsFacingRight = true;
         footstepTimer = timeBetweenSteps;
         cameraOffset = cam.GetComponent<CinemachineCameraOffset>();
+        Manager = GameObject.FindGameObjectWithTag("Manager");
     }
 
     private void Update()
@@ -689,6 +692,7 @@ public class PlayerMovement : MonoBehaviour
         if ((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("respawnBorder")) && !attacked)
         {
             attacked = true;
+            Manager.GetComponent<manager>().deathVoiceLineActive = true;
 
             disableAnims();
             if (IsFacingRight)
