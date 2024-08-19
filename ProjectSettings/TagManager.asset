@@ -10,6 +10,7 @@ TagManager:
   - Box
   - Manager
   - respawnBorder
+  - Tim
   layers:
   - Default
   - TransparentFX

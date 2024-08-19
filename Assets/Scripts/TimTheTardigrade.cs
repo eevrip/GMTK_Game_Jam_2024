@@ -15,6 +15,8 @@ public class TimTheTardigrade : MonoBehaviour
     private float deviationSpeed = 5f;
     private float currDeviationAngle;
 
+    public bool canMove;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +27,19 @@ public class TimTheTardigrade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 toDesiredPosition = player.transform.position + timsDesiredOffset - transform.position;
-        toDesiredPosition.z = 0;
-
-        currDeviationAngle += Random.Range(-randomAngleDeviation, randomAngleDeviation) * deviationSpeed * Time.deltaTime;
-        currDeviationAngle = Mathf.Clamp(currDeviationAngle, -randomAngleDeviation, randomAngleDeviation);
-        toDesiredPosition = Quaternion.AngleAxis(currDeviationAngle, Vector3.forward) * toDesiredPosition;
-        if (toDesiredPosition.magnitude > 1 )
+        if (canMove)
         {
-            toDesiredPosition.Normalize();
+            Vector3 toDesiredPosition = player.transform.position + timsDesiredOffset - transform.position;
+            toDesiredPosition.z = 0;
+
+            currDeviationAngle += Random.Range(-randomAngleDeviation, randomAngleDeviation) * deviationSpeed * Time.deltaTime;
+            currDeviationAngle = Mathf.Clamp(currDeviationAngle, -randomAngleDeviation, randomAngleDeviation);
+            toDesiredPosition = Quaternion.AngleAxis(currDeviationAngle, Vector3.forward) * toDesiredPosition;
+            if (toDesiredPosition.magnitude > 1)
+            {
+                toDesiredPosition.Normalize();
+            }
+            transform.position += toDesiredPosition * speed * Time.deltaTime;
         }
-        transform.position += toDesiredPosition * speed * Time.deltaTime;
     }
 }
