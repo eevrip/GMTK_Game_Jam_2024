@@ -6,17 +6,14 @@ public class introManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject Tim;
-    public AudioSource timAudio1;
-    public AudioSource timAudio2;
+    public Dialogue timDialogue;
+    public Dialogue timDialogue2;
     public bool arrived;
     public bool timMove;
 
-    private void Awake()
-    {
-        timAudio1.Play();
-    }
     private void Start()
     {
+        DialogueManager.Instance.StartDialogue(timDialogue);
         // cannot move
         player.GetComponent<PlayerMovement>().attacked = true;
         Tim = GameObject.FindGameObjectWithTag("Tim");
@@ -51,7 +48,7 @@ public class introManager : MonoBehaviour
 
     void playTimAudio()
     {
-        timAudio2.Play();
+        DialogueManager.Instance.StartDialogue(timDialogue2);
     }
 
     IEnumerator playTimIntro()
@@ -59,13 +56,13 @@ public class introManager : MonoBehaviour
         yield return new WaitForSeconds(2.4f);
         timMove = true;
         playTimAudio();
-        player.GetComponent<PlayerMovement>().attacked = false;
         StartCoroutine(stopIntro());
     }
 
     IEnumerator stopIntro()
     {
         yield return new WaitForSeconds(47f);
+        player.GetComponent<PlayerMovement>().attacked = false;
         Tim.GetComponent<TimTheTardigrade>().canMove = true;
         Destroy(this);
     }

@@ -28,7 +28,6 @@ public class DialogueManager : Singleton<DialogueManager>
     private int functionAtSentence = 0;
 
     private UnityEvent function;
-    private Dialogue currentDialogue;
 
     public void Awake()
     {
@@ -38,14 +37,15 @@ public class DialogueManager : Singleton<DialogueManager>
     // Start is called before the first frame update
     public void StartDialogue(Dialogue dialogue)
     {
-        currentDialogue = dialogue;
         functionAtSentence = dialogue.functionAtSentence;
         function = dialogue.function;
 
         if (animator)
             animator.SetBool("IsOpen", true);
 
-        Time.timeScale = 0;
+        if (dialogue.freezeTime)
+            Time.timeScale = 0;
+
         if (dialogue.name != "")
         {
             if (nameText)
@@ -111,9 +111,11 @@ public class DialogueManager : Singleton<DialogueManager>
 
         if (!waitForUserToClickContinue)
         {
-            yield return new WaitForSecondsRealtime(sentenceAudioSource.clip.length);
-
+            //yield return new WaitForSecondsRealtime(sentenceAudioSource.clip.length);
+            Debug.Log("End clip length");
             yield return new WaitForSecondsRealtime(pauseBetweenMessages);
+            Debug.Log("End pause");
+
             DisplayNextSentence();
         }
     }
