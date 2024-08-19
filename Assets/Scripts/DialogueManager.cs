@@ -165,6 +165,8 @@ public class DialogueManager : Singleton<DialogueManager>
                 EndDialogue();
                 if (skipSFX)
                     skipSFX.Play();
+                if (sentenceAudioSource.isPlaying)
+                    sentenceAudioSource.Stop();
                 break;
         }
     }
