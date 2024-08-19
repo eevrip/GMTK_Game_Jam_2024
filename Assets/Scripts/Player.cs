@@ -24,14 +24,20 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject timTheTardigradePrefab;
 
+    [SerializeField]
+    private Vector2 spawnPoint;
+
+    private static bool isNewLevelLoaded;
+    public static bool IsNewLevelLoaded { get { return isNewLevelLoaded; } set { isNewLevelLoaded = value; } }
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        //lastCheckpoint = transform.position;
+       
 
         GameObject tim = Instantiate(timTheTardigradePrefab);
         tim.transform.position = transform.position + tim.GetComponent<TimTheTardigrade>().timsDesiredOffset;
-        if(lastCheckpoint != null)
+        if(!isNewLevelLoaded)
         {
             ResetPosition(lastCheckpoint);
         }

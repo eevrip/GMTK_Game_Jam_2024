@@ -14,8 +14,8 @@ public class resetLevel : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player"))
         {
-            Player player = other.gameObject.GetComponent<Player>();
 
+            Player.IsNewLevelLoaded = false;
             Scene currentScene = SceneManager.GetActiveScene();
 
             SceneManager.LoadScene(currentScene.name); 

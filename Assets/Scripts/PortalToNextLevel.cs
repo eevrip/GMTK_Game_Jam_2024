@@ -11,6 +11,7 @@ public class PortalToNextLevel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+           Player.IsNewLevelLoaded = true;
             int nextIdx = SceneManager.GetActiveScene().buildIndex + 1;
             if (nextIdx < SceneManager.sceneCountInBuildSettings)
                 SceneManager.LoadScene(nextIdx);

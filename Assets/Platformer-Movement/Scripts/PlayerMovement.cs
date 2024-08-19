@@ -652,6 +652,7 @@ public class PlayerMovement : MonoBehaviour
         {
             attacked = true;
             // Respawn
+            Player.IsNewLevelLoaded = false;
            Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
 
