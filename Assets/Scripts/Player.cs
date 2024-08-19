@@ -45,26 +45,29 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        fireCooldownTimer += Time.deltaTime;
+       
 
         if (QuantumObjectsManager.instance.isInEntanglementMode)
-        {
+        {   fireCooldownTimer = 0f;
             entanglementRangeVisualizer.SetActive(true);
             return; // No firing projectiles when in entanglement mode
+            
         }
         else
-        {
+        {   fireCooldownTimer += Time.deltaTime;
             entanglementRangeVisualizer.SetActive(false);
-            if (fireCooldownTimer >= fireCooldown)
-            {
-                if (Input.GetButtonDown("Fire2"))
+            
+                if (fireCooldownTimer >= fireCooldown)
                 {
-                    FireProjectile(growProjectilePrefab);
-                }
-                else if (Input.GetButtonDown("Fire1"))
-                {
-                    FireProjectile(shrikProjectilePrefab);
-                }
+                    if (Input.GetButtonDown("Fire2"))
+                    {
+                        FireProjectile(growProjectilePrefab);
+                    }
+                    else if (Input.GetButtonDown("Fire1"))
+                    {
+                        FireProjectile(shrikProjectilePrefab);
+                    }
+                
             }
         }
     }
