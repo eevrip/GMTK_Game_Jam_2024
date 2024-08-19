@@ -19,7 +19,7 @@ public class QuantumObject : MonoBehaviour
     [SerializeField]
     private QuantumObjectsManager.Level minScaleLvl;
 
-    [SerializeField]   
+    [SerializeField]
     private QuantumObjectsManager.Level maxScaleLvl = QuantumObjectsManager.Level.Level5;
 
 
@@ -40,6 +40,8 @@ public class QuantumObject : MonoBehaviour
 
     [SerializeField]
     private bool canBeMoved;
+    [SerializeField]
+    private bool canKill;
 
     private void Awake()
     {
@@ -47,15 +49,15 @@ public class QuantumObject : MonoBehaviour
     }
     private void Start()
     {
-        if (startingScaleLvl > maxScaleLvl) 
+        if (startingScaleLvl > maxScaleLvl)
         {
             startingScaleLvl = maxScaleLvl;
         }
-        else if(startingScaleLvl < minScaleLvl)
+        else if (startingScaleLvl < minScaleLvl)
         {
             startingScaleLvl = minScaleLvl;
         }
-        
+
         currScaleLvl = startingScaleLvl;
         manager = QuantumObjectsManager.instance;
         rb = GetComponent<Rigidbody2D>();
@@ -68,7 +70,7 @@ public class QuantumObject : MonoBehaviour
         if (canBeMoved)
         {
             float currMass = manager.MassScale(currScaleLvl);
-            rb.mass = currMass*massFactor;
+            rb.mass = currMass * massFactor;
         }
     }
 
@@ -103,18 +105,18 @@ public class QuantumObject : MonoBehaviour
 
     public void ChangeScaleLevel(int i)
     {
-        
+
         if (i < 0 && ReachBoundary() != -1)
             currScaleLvl--;
         else if (i > 0 && ReachBoundary() != 1)
             currScaleLvl++;
 
         float scaleXY = manager.LvlScale(currScaleLvl);
-        transform.localScale = new Vector3(scaleXY*scalingFactor, scaleXY*scalingFactor, 1f);
+        transform.localScale = new Vector3(scaleXY * scalingFactor, scaleXY * scalingFactor, 1f);
         if (canBeMoved)
         {
             float currMass = manager.MassScale(currScaleLvl);
-            rb.mass = currMass*massFactor;
+            rb.mass = currMass * massFactor;
         }
     }
 
@@ -144,5 +146,19 @@ public class QuantumObject : MonoBehaviour
             if (!QuantumObjectsManager.instance.TryToEntangle(this))
                 QuantumObjectsManager.instance.Disentangle(this);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (canKill)
+        {
+
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                Destroy(other.gameObject);
+            }
+        }
+        else
+            return;
     }
 }
