@@ -41,16 +41,6 @@ public class Player : MonoBehaviour
     {
         fireCooldownTimer += Time.deltaTime;
 
-        if (QuantumObjectsManager.instance.isInEntanglementMode)
-        {
-            entanglementRangeVisualizer.SetActive(true);
-            return; // No firing projectiles when in entanglement mode
-        }
-        else
-        {
-            entanglementRangeVisualizer.SetActive(false);
-        }
-
         if (fireCooldownTimer >= fireCooldown)
         {
             if (Input.GetButtonDown("Fire2"))
@@ -62,6 +52,16 @@ public class Player : MonoBehaviour
                 FireProjectile(shrikProjectilePrefab);
             }
         }
+
+        if (QuantumObjectsManager.instance.isInEntanglementMode)
+        {
+            entanglementRangeVisualizer.SetActive(true);
+            return; // No firing projectiles when in entanglement mode
+        }
+        else
+        {
+            entanglementRangeVisualizer.SetActive(false);
+        }
     }
 
     public void ResetPosition(Vector2 checkpoint)
@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
     }
     void FireProjectile(GameObject projectilePrefab)
     {
+        Debug.Log("Shoot");
         Vector3 shootPos = transform.position + new Vector3(launchOffset.x * transform.localScale.x, launchOffset.y, launchOffset.z);
         GameObject proj = Instantiate(projectilePrefab, shootPos, transform.rotation);
 

@@ -19,6 +19,7 @@ public class TimTheTardigrade : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<Player>();
+        transform.position = player.transform.position;
     }
 
     // Update is called once per frame

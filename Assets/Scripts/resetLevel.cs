@@ -15,11 +15,10 @@ public class resetLevel : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Player player = other.gameObject.GetComponent<Player>();
-            
 
-                Scene currentScene = SceneManager.GetActiveScene();
+            Scene currentScene = SceneManager.GetActiveScene();
 
-                SceneManager.LoadScene(currentScene.name); 
+            SceneManager.LoadScene(currentScene.name); 
         }
         else if (other.gameObject.CompareTag("Box"))
         {
