@@ -23,7 +23,7 @@ public class BreakablePlatform : MonoBehaviour
             
             float angle = Vector3.Dot(-Vector2.up, relDirNor);
             float angleOffset = 0.1f;
-            Debug.Log("vel= " + relVelY);
+
             if (forceVal > breakingPoint
                 || (otherRb.mass > breakingPoint && Mathf.Abs(1-angle)<angleOffset))
                 Destroy(gameObject);
@@ -43,7 +43,7 @@ public class BreakablePlatform : MonoBehaviour
 
             float angle = Vector3.Dot(Vector2.up, relDirNor);
             float angleOffset = 0.1f;
-            Debug.Log(angle);
+
             if (otherRb.mass > breakingPoint && Mathf.Abs(1 - angle) < angleOffset)
                 Destroy(gameObject);
         }

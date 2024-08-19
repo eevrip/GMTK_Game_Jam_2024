@@ -46,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject Manager;
 
+    public GameObject introManager;
+
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -57,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     //Variables control the various actions the player can perform at any time.
     //These are fields which can are public allowing for other sctipts to read them
     //but can only be privately written to.
-    public bool IsFacingRight { get; private set; }
+    public bool IsFacingRight;
     public bool IsJumping { get; private set; }
     public bool IsWallJumping { get; private set; }
     public bool IsDashing { get; private set; }
@@ -730,13 +732,13 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region AUDIO
-    void playFootsteps()
+    public void playFootsteps()
     {
         int i = Random.Range(0, footsteps.Length);
         walkingAudio.clip = footsteps[i];
         walkingAudio.Play();
     }
-    void stopFootsteps()
+    public void stopFootsteps()
     {
         walkingAudio.Stop();
     }
