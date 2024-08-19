@@ -29946,7 +29946,7 @@ GameObject:
   - component: {fileID: 1143415625}
   m_Layer: 0
   m_Name: BottomBorder
-  m_TagString: Untagged
+  m_TagString: respawnBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32551,9 +32551,17 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2246853015937302732, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+      propertyPath: otherAudio
+      value: 
+      objectReference: {fileID: 3148718192100825905}
+    - target: {fileID: 2246853015937302732, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2246853015937302732, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+      propertyPath: walkingAudio
+      value: 
+      objectReference: {fileID: 3148718192100825899}
     - target: {fileID: 2246853015937302732, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
       propertyPath: quantumLevelDesign
       value: 
@@ -32634,6 +32642,16 @@ PrefabInstance:
 --- !u!1 &3148718192100825898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8293594022593229129, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+  m_PrefabInstance: {fileID: 3148718192100825897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3148718192100825899 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -9005540601039655023, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+  m_PrefabInstance: {fileID: 3148718192100825897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3148718192100825905 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7251376203809332830, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
   m_PrefabInstance: {fileID: 3148718192100825897}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6748654584431315190

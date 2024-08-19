@@ -62,13 +62,15 @@ public class Player : MonoBehaviour
                     if (Input.GetButtonDown("Fire2"))
                     {
                         FireProjectile(growProjectilePrefab);
+                        this.GetComponent<PlayerMovement>().playShoot();
                     }
                     else if (Input.GetButtonDown("Fire1"))
                     {
                         FireProjectile(shrikProjectilePrefab);
+                        this.GetComponent<PlayerMovement>().playShoot();
                     }
                 
-            }
+                }
         }
     }
 
