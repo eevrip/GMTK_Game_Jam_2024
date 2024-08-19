@@ -17,6 +17,7 @@ public class PortalToNextLevel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+           
             Manager.GetComponent<manager>().levels[levelNum] = true;
             Manager.GetComponent<manager>().SaveManager();
 
