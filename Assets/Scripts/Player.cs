@@ -24,8 +24,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject timTheTardigradePrefab;
 
-    [SerializeField]
-    private Vector2 spawnPoint;
+   
 
     private static bool isNewLevelLoaded;
     public static bool IsNewLevelLoaded { get { return isNewLevelLoaded; } set { isNewLevelLoaded = value; } }
