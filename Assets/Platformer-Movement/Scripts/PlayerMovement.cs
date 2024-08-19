@@ -29,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator anim;
 
+    public AudioSource walkingAudio;
+    public AudioSource otherAudio;
+    public AudioClip[] jump;
+    public AudioClip[] shoot;
+    public AudioClip[] footsteps;
+    public float timeBetweenSteps;
+    public float footstepTimer;
+    
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -102,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
     {
         SetGravityScale(Data.gravityScale);
         IsFacingRight = true;
+        footstepTimer = timeBetweenSteps;
     }
 
     private void Update()
@@ -115,14 +124,7 @@ public class PlayerMovement : MonoBehaviour
         LastPressedJumpTime -= Time.deltaTime;
         LastPressedDashTime -= Time.deltaTime;
 
-        /*if (attacked)
-        {
-            attackTimer -= Time.deltaTime;
-            if (attackTimer < 0)
-            {
-                attacked = false;
-            }
-        }*/
+        footstepTimer -= Time.deltaTime;
         #endregion
 
         #region INPUT HANDLER
@@ -143,6 +145,11 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetBool("runningL", true);
                 }
 
+                if (footstepTimer <= 0 && !IsJumping)
+                {
+                    playFootsteps();
+                    footstepTimer = timeBetweenSteps;
+                }
             }
             else
             {
@@ -155,8 +162,8 @@ public class PlayerMovement : MonoBehaviour
                 {
                     anim.SetBool("idleL", true);
                 }
-            }
-        
+                stopFootsteps();
+            }   
         }
             
 
@@ -473,6 +480,7 @@ public class PlayerMovement : MonoBehaviour
         //Ensures we can't call Jump multiple times from one press
         LastPressedJumpTime = 0;
         LastOnGroundTime = 0;
+        playJump();
 
         #region Perform Jump
         //We increase the force applied if we are falling
@@ -586,7 +594,6 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
-
     #region CHECK METHODS
     public void CheckDirectionToFace(bool isMovingRight)
     {
@@ -633,7 +640,6 @@ public class PlayerMovement : MonoBehaviour
             return false;
     }
     #endregion
-
 
     #region EDITOR METHODS
     private void OnDrawGizmosSelected()
@@ -704,6 +710,33 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("idleL", false);
         anim.SetBool("idleR", false);
         
+    }
+    #endregion
+
+    #region AUDIO
+    void playFootsteps()
+    {
+        int i = Random.Range(0, footsteps.Length);
+        walkingAudio.clip = footsteps[i];
+        walkingAudio.Play();
+    }
+    void stopFootsteps()
+    {
+        walkingAudio.Stop();
+    }
+
+    void playJump()
+    {
+        int i = Random.Range(0, jump.Length);
+        otherAudio.clip = jump[i];
+        otherAudio.Play();
+    }
+
+    public void playShoot()
+    {
+        int i = Random.Range(0, shoot.Length);
+        otherAudio.clip = shoot[i];
+        otherAudio.Play();
     }
     #endregion
 }
