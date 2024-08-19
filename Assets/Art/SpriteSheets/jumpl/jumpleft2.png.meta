@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: jumpleft2_0
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 57
+        width: 551
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597afd7067ea3cd4c832b87d97d75d17
+      internalID: -1636716494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft2_1
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 54
+        width: 536
+        height: 943
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4019759e1899deb4bae349a58e590e95
+      internalID: 980195770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft2_2
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 54
+        width: 492
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0a1399a41c82c4797ed36acd661e2b
+      internalID: 486311891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft2_3
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 54
+        width: 493
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cd8fb40fc63414182a551fd9a4165c
+      internalID: 496669220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft2_4
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 756
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3409596b08e46b349ba66551ae026573
+      internalID: -707921424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft2_5
+      rect:
+        serializedVersion: 2
+        x: 4679
+        y: 54
+        width: 482
+        height: 975
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d8b9febccfa7b45986ca913bf71bf8
+      internalID: 747472942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jumpleft2_0: -1636716494
+      jumpleft2_1: 980195770
+      jumpleft2_2: 486311891
+      jumpleft2_3: 496669220
+      jumpleft2_4: -707921424
+      jumpleft2_5: 747472942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

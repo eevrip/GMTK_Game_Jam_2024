@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: jumpleft1_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 51
+        width: 461
+        height: 954
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722d678882e8064458d2d4ca686edb83
+      internalID: 402229260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft1_1
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 545
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a12fb96e51d5f8428ecab251b2f67ab
+      internalID: 76164952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft1_2
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 51
+        width: 514
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8787636b0fbff4b9c818678340f2f4
+      internalID: -1580174381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft1_3
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 49
+        width: 506
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b793f9bfc3f924e95dc7027dc5edbc
+      internalID: 658645991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft1_4
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 49
+        width: 506
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1611b288334c4a246bb7422d5850e84d
+      internalID: -776229579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft1_5
+      rect:
+        serializedVersion: 2
+        x: 4676
+        y: 54
+        width: 530
+        height: 956
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f758077f32eb0439e5324ed451b767
+      internalID: -801418310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleft1_6
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 418
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be913c6276f252944b4a1e3d899772e3
+      internalID: 1702193844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +279,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jumpleft1_0: 402229260
+      jumpleft1_1: 76164952
+      jumpleft1_2: -1580174381
+      jumpleft1_3: 658645991
+      jumpleft1_4: -776229579
+      jumpleft1_5: -801418310
+      jumpleft1_6: 1702193844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
