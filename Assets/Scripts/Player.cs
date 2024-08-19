@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     private static bool isNewLevelLoaded;
     public static bool IsNewLevelLoaded { get { return isNewLevelLoaded; } set { isNewLevelLoaded = value; } }
 
+    public bool canUseGrowProjectile = true;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -61,8 +63,11 @@ public class Player : MonoBehaviour
                 {
                     if (Input.GetButtonDown("Fire2"))
                     {
-                        FireProjectile(growProjectilePrefab);
-                        this.GetComponent<PlayerMovement>().playShoot();
+                        if (growProjectilePrefab && canUseGrowProjectile)
+                        {
+                            FireProjectile(growProjectilePrefab);
+                            this.GetComponent<PlayerMovement>().playShoot();
+                        }
                     }
                     else if (Input.GetButtonDown("Fire1"))
                     {
