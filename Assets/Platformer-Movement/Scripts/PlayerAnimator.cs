@@ -60,7 +60,7 @@ public class PlayerAnimator : MonoBehaviour
         spriteRend.transform.localRotation = Quaternion.Euler(0, 0, rot * mult);
         #endregion
 
-        CheckAnimationState();
+       // CheckAnimationState();
 
         ParticleSystem.MainModule jumpPSettings = _jumpParticle.main;
         jumpPSettings.startColor = new ParticleSystem.MinMaxGradient(particleColor);

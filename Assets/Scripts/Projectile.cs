@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-	public enum ProjectileType { Grow, Shrik}
-	public ProjectileType projectileType = ProjectileType.Grow;
+	public enum ProjectileType { Grow, Shrink}
+	public ProjectileType projectileType = ProjectileType.Shrink;
 	private bool hasCollided = false;
 
 	void Start()
@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
 				case ProjectileType.Grow:
 					QuantumObjectsManager.instance.ChangeLevelOfEntangledObjs(qo, 1);
 					break;
-				case ProjectileType.Shrik:
+				case ProjectileType.Shrink:
 					QuantumObjectsManager.instance.ChangeLevelOfEntangledObjs(qo, -1);
 					break;
 				default:

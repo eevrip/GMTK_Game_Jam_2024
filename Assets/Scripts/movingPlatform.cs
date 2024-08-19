@@ -10,7 +10,19 @@ public class movingPlatform : MonoBehaviour
 
     private bool movingToB = false;
 
+    [SerializeField]private bool isMoving;
+    public bool IsMoving { get { return isMoving; } set { isMoving = value; } }
+    
+    public static buttonController.ActivationItem typeOfActivation { get; private set; } = buttonController.ActivationItem.MovingPlatform;
     void Update()
+    {
+       if(isMoving)
+        {
+            Move();
+        }
+    }
+    
+    public void Move()
     {
         float step = speed * Time.deltaTime;
 
@@ -33,7 +45,6 @@ public class movingPlatform : MonoBehaviour
             }
         }
     }
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))

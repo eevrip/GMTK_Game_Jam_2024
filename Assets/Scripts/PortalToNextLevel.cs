@@ -22,6 +22,7 @@ public class PortalToNextLevel : MonoBehaviour
             Manager.GetComponent<manager>().levels[levelNum] = true;
             Manager.GetComponent<manager>().SaveManager();
 
+           Player.IsNewLevelLoaded = true;
             int nextIdx = SceneManager.GetActiveScene().buildIndex + 1;
             if (nextIdx < SceneManager.sceneCountInBuildSettings)
                 SceneManager.LoadScene(nextIdx);

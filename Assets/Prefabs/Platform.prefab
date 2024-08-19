@@ -177,6 +177,7 @@ MonoBehaviour:
   pointA: {fileID: 6609191753135823381}
   pointB: {fileID: 5687716679692232021}
   speed: 4
+  isMoving: 1
 --- !u!1 &7990826177151638670
 GameObject:
   m_ObjectHideFlags: 0
