@@ -135,9 +135,11 @@ public class manager : MonoBehaviour
     public void LoadManager()
     {
         LevelData data = SaveSystem.LoadManager();
-
-        levels[0] = data.levels[0];
-        levels[1] = data.levels[1];
-        levels[2] = data.levels[2];
+        if (data!= null)
+        {
+            levels[0] = data.levels[0];
+            levels[1] = data.levels[1];
+            levels[2] = data.levels[2];
+        }
     }
 }
