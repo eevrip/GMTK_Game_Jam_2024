@@ -28,6 +28,10 @@ public class manager : MonoBehaviour
     [Header("Save System")]
     public bool[] levels;
 
+    public bool deathVoiceLineActive;
+    public AudioSource deathVoice;
+    public AudioClip[] deathVoiceLines;
+
     void Awake()
     {
         if (instance == null)
@@ -70,6 +74,11 @@ public class manager : MonoBehaviour
             mainVolume = audioManager.GetComponent<audioManager>().mainVolume;
             sfxVolume = audioManager.GetComponent<audioManager>().sfxVolume;
             musicVolume = audioManager.GetComponent<audioManager>().musicVolume;
+        }
+
+        if (deathVoiceLineActive)
+        {
+            StartCoroutine(playDeathVoice());
         }
     }
 
@@ -126,6 +135,15 @@ public class manager : MonoBehaviour
             settings.SetActive(false);
         }
         loadAudioLevels = true;
+    }
+
+    public IEnumerator playDeathVoice()
+    {
+        yield return new WaitForSeconds(1);
+        int i = Random.Range(0, deathVoiceLines.Length);
+        deathVoice.clip = deathVoiceLines[i];
+        deathVoice.Play();
+        deathVoiceLineActive = false;
     }
 
     public void SaveManager()

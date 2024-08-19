@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +6,7 @@ public class PortalToNextLevel : MonoBehaviour
 {
 
     public GameObject Manager;
+    public GameObject fade;
     public int levelNum;
 
     private void Start()
@@ -21,12 +20,20 @@ public class PortalToNextLevel : MonoBehaviour
             Manager.GetComponent<manager>().levels[levelNum] = true;
             Manager.GetComponent<manager>().SaveManager();
 
-           Player.IsNewLevelLoaded = true;
-            int nextIdx = SceneManager.GetActiveScene().buildIndex + 1;
-            if (nextIdx < SceneManager.sceneCountInBuildSettings)
-                SceneManager.LoadScene(nextIdx);
-            else
-                SceneManager.LoadScene(0);
+            fade.GetComponent<Animator>().SetTrigger("Fade");
+
+            StartCoroutine(loadnextLevel());
         }
+    }
+
+    IEnumerator loadnextLevel()
+    {
+        yield return new WaitForSeconds(1);
+        Player.IsNewLevelLoaded = true;
+        int nextIdx = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextIdx < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(nextIdx);
+        else
+            SceneManager.LoadScene(0);
     }
 }

@@ -446,6 +446,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fa45e456612819748b1ec9eed7bc8a71, type: 3}
   timeBetweenSteps: 0.3
   footstepTimer: 0
+  cam: {fileID: 0}
+  smoothTime: 1
+  targetOffset: {x: 0, y: 0, z: 0}
   _groundCheckPoint: {fileID: 6398794294297143363}
   _groundCheckSize: {x: 0.49, y: 0.03}
   _frontWallCheckPoint: {fileID: 5438797827620468306}
