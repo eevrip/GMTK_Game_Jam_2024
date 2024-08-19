@@ -354,10 +354,10 @@ public class PlayerMovement : MonoBehaviour
         #endregion
 
         #region Change Dimension
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            changeDimension();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+       // {
+       //     changeDimension();
+       // }
         #endregion
 
     }
