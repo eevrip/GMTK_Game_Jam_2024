@@ -13,7 +13,7 @@ public class buttonController : MonoBehaviour
     public bool affectsPlayer;
     [SerializeField]
     [Tooltip("The item that the button is connected to")]
-    private GameObject item;
+    private List<GameObject> items;
     public enum ActivationItem { Bridge, MovingPlatform, Door};
 
     [SerializeField]
@@ -39,24 +39,27 @@ public class buttonController : MonoBehaviour
         }
         else
         {
-            if (item)
+            foreach (GameObject item in items)
             {
-                switch(activationItem)
+                if (item)
                 {
-                    case ActivationItem.Bridge:
-                        this.item.GetComponent<Bridge>().ExtendBridge();
-                        break;
-                    case ActivationItem.MovingPlatform:
-                        movingPlatform temp = this.item.GetComponent<movingPlatform>();
-                        temp.IsMoving = !temp.IsMoving;
-                        break;
-                    case ActivationItem.Door:
-                        this.item.GetComponent<Door>().OpenDoor();
-                        break;
-                    default:
-                        break;
+                    switch (activationItem)
+                    {
+                        case ActivationItem.Bridge:
+                            item.GetComponent<Bridge>().ExtendBridge();
+                            break;
+                        case ActivationItem.MovingPlatform:
+                            movingPlatform temp = item.GetComponent<movingPlatform>();
+                            temp.IsMoving = !temp.IsMoving;
+                            break;
+                        case ActivationItem.Door:
+                            item.GetComponent<Door>().OpenDoor();
+                            break;
+                        default:
+                            break;
+                    }
+
                 }
-               
             }
         }
         
@@ -67,22 +70,25 @@ public class buttonController : MonoBehaviour
 
         if (hasUnpressedEffect)
         {
-            if (item)
+            foreach (GameObject item in items)
             {
-                switch (activationItem)
+                if (item)
                 {
-                    case ActivationItem.Bridge:
-                        this.item.GetComponent<Bridge>().ExtendBridge();
-                        break;
-                    case ActivationItem.MovingPlatform:
-                        movingPlatform temp = this.item.GetComponent<movingPlatform>();
-                        temp.IsMoving = !temp.IsMoving;
-                        break;
-                    case ActivationItem.Door:
-                        this.item.GetComponent<Door>().OpenDoor();
-                        break;
-                    default:
-                        break;
+                    switch (activationItem)
+                    {
+                        case ActivationItem.Bridge:
+                            item.GetComponent<Bridge>().ExtendBridge();
+                            break;
+                        case ActivationItem.MovingPlatform:
+                            movingPlatform temp = item.GetComponent<movingPlatform>();
+                            temp.IsMoving = !temp.IsMoving;
+                            break;
+                        case ActivationItem.Door:
+                            item.GetComponent<Door>().OpenDoor();
+                            break;
+                        default:
+                            break;
+                    }
                 }
 
             }
