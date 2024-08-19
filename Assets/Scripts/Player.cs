@@ -41,18 +41,6 @@ public class Player : MonoBehaviour
     {
         fireCooldownTimer += Time.deltaTime;
 
-        if (fireCooldownTimer >= fireCooldown)
-        {
-            if (Input.GetButtonDown("Fire2"))
-            {
-                FireProjectile(growProjectilePrefab);
-            }
-            else if (Input.GetButtonDown("Fire1"))
-            {
-                FireProjectile(shrikProjectilePrefab);
-            }
-        }
-
         if (QuantumObjectsManager.instance.isInEntanglementMode)
         {
             entanglementRangeVisualizer.SetActive(true);
@@ -61,6 +49,17 @@ public class Player : MonoBehaviour
         else
         {
             entanglementRangeVisualizer.SetActive(false);
+            if (fireCooldownTimer >= fireCooldown)
+            {
+                if (Input.GetButtonDown("Fire2"))
+                {
+                    FireProjectile(growProjectilePrefab);
+                }
+                else if (Input.GetButtonDown("Fire1"))
+                {
+                    FireProjectile(shrikProjectilePrefab);
+                }
+            }
         }
     }
 
