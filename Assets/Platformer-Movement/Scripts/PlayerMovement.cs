@@ -632,13 +632,13 @@ public class PlayerMovement : MonoBehaviour
         quantumLevel = !quantumLevel;
         if (!quantumLevel)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, -10);
             quantumLevelDesign.SetActive(true);
             nonQuantumLevelDesign.SetActive(false);
         }
         else
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 15);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, 15);
             quantumLevelDesign.SetActive(false);
             nonQuantumLevelDesign.SetActive(true);
         }
