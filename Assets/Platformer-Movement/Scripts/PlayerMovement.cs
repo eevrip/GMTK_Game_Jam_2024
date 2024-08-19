@@ -27,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     public bool attacked;
     public float attackTimer;
 
+    public Animator anim;
+
+
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
     //Script to handle all player animations, all references can be safely removed if you're importing into your own project.
@@ -127,7 +130,15 @@ public class PlayerMovement : MonoBehaviour
         _moveInput.y = Input.GetAxisRaw("Vertical");
 
         if (_moveInput.x != 0)
+        {
             CheckDirectionToFace(_moveInput.x > 0);
+            anim.SetBool("running", true);
+        }
+        else
+        {
+            anim.SetBool("running", false);
+        }
+            
 
 		if(Input.GetKeyDown(KeyCode.Space))
         {

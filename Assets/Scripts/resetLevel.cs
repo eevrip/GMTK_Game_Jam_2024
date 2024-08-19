@@ -20,8 +20,10 @@ public class resetLevel : MonoBehaviour
                 Scene currentScene = SceneManager.GetActiveScene();
 
                 SceneManager.LoadScene(currentScene.name); 
-           
-            
+        }
+        else if (other.gameObject.CompareTag("Box"))
+        {
+            other.transform.position = other.gameObject.GetComponent<QuantumObject>().startpos;
         }
     }
 }

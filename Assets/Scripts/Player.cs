@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
-        
         rb = GetComponent<Rigidbody2D>();
         //lastCheckpoint = transform.position;
 
@@ -36,10 +35,6 @@ public class Player : MonoBehaviour
         {
             ResetPosition(lastCheckpoint);
         }
-        
-     
-        
-        
     }
 
     void Update()
@@ -71,12 +66,7 @@ public class Player : MonoBehaviour
 
     public void ResetPosition(Vector2 checkpoint)
     {
-       
-       
-       
         transform.position = checkpoint;
-        
-       
     }
     void FireProjectile(GameObject projectilePrefab)
     {

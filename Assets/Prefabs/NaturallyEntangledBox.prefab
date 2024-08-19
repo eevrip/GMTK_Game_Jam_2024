@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7030672092939528698}
   m_Layer: 3
   m_Name: NaturallyEntangledBox
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,12 +134,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entangledObj: {fileID: 0}
   scalingFactor: 0
+  massFactor: 0
   minScaleLvl: 0
   maxScaleLvl: 4
   startingScaleLvl: 0
   EntangledVisuals: {fileID: 4881719855463717573}
   entanglementParticleSystem: {fileID: 8262964139004578418}
   isNaturallyEntangled: 0
+  startpos: {x: 0, y: 0}
   canBeMoved: 0
 --- !u!61 &7231732800516226096
 BoxCollider2D:

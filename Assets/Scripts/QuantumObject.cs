@@ -19,8 +19,7 @@ public class QuantumObject : MonoBehaviour
     [SerializeField]
     private QuantumObjectsManager.Level minScaleLvl;
 
-    [SerializeField]
-    
+    [SerializeField]   
     private QuantumObjectsManager.Level maxScaleLvl = QuantumObjectsManager.Level.Level5;
 
 
@@ -34,12 +33,18 @@ public class QuantumObject : MonoBehaviour
     private GameObject entanglementParticleSystem;
     [SerializeField]
     private bool isNaturallyEntangled = false;
+    [SerializeField]
+    public Vector2 startpos;
 
     private Rigidbody2D rb;
 
     [SerializeField]
     private bool canBeMoved;
 
+    private void Awake()
+    {
+        startpos = transform.position;
+    }
     private void Start()
     {
         if (startingScaleLvl > maxScaleLvl) 
