@@ -13,7 +13,15 @@ public class resetLevel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Box"))
         {
-            other.transform.position = other.gameObject.GetComponent<QuantumObject>().startpos;
+            if (!other.gameObject.GetComponent<QuantumObject>().CanDisappear)
+            {
+                other.transform.position = other.gameObject.GetComponent<QuantumObject>().startpos;
+            }
+            else
+            {
+                QuantumObjectsManager.instance.DisentangleNaturalObj(other.gameObject.GetComponent<QuantumObject>().entangledObj);
+                Destroy(other.gameObject);
+            }
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {

@@ -32,7 +32,7 @@ public class QuantumObject : MonoBehaviour
     [SerializeField]
     private GameObject entanglementParticleSystem;
     [SerializeField]
-    private bool isNaturallyEntangled = false;
+   public bool isNaturallyEntangled = false;
     [SerializeField]
     public Vector2 startpos;
 
@@ -42,7 +42,9 @@ public class QuantumObject : MonoBehaviour
     private bool canBeMoved;
     [SerializeField]
     private bool canKill;
-
+    [SerializeField]
+    private bool canDisappear;
+    public bool CanDisappear => canDisappear;
     private void Awake()
     {
         startpos = transform.position;
