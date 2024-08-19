@@ -10,6 +10,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -36,7 +37,13 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip[] footsteps;
     public float timeBetweenSteps;
     public float footstepTimer;
-    
+
+    public GameObject cam;
+    public float smoothTime;
+    private Vector3 currentVelocity = Vector3.zero;
+    private CinemachineCameraOffset cameraOffset;
+    public Vector3 targetOffset;
+
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -111,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         SetGravityScale(Data.gravityScale);
         IsFacingRight = true;
         footstepTimer = timeBetweenSteps;
+        cameraOffset = cam.GetComponent<CinemachineCameraOffset>();
     }
 
     private void Update()
@@ -132,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
         _moveInput.y = Input.GetAxisRaw("Vertical");
         if (!attacked)
         {
+            
             if (_moveInput.x != 0)
             {
                 CheckDirectionToFace(_moveInput.x > 0);
@@ -139,10 +148,12 @@ public class PlayerMovement : MonoBehaviour
                 if (IsFacingRight)
                 {
                     anim.SetBool("runningR", true);
+                    targetOffset = new Vector3(10, 0, 0);
                 }
                 else
                 {
                     anim.SetBool("runningL", true);
+                    targetOffset = new Vector3(-10, 0, 0);
                 }
 
                 if (footstepTimer <= 0 && !IsJumping)
@@ -163,7 +174,8 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetBool("idleL", true);
                 }
                 stopFootsteps();
-            }   
+            }
+            cameraOffset.m_Offset = Vector3.SmoothDamp(cameraOffset.m_Offset, targetOffset, ref currentVelocity, smoothTime);
         }
             
 
