@@ -11,16 +11,7 @@ public class resetLevel : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        
-        if (other.gameObject.CompareTag("Player"))
-        {
-
-            Player.IsNewLevelLoaded = false;
-            Scene currentScene = SceneManager.GetActiveScene();
-
-            SceneManager.LoadScene(currentScene.name); 
-        }
-        else if (other.gameObject.CompareTag("Box"))
+        if (other.gameObject.CompareTag("Box"))
         {
             other.transform.position = other.gameObject.GetComponent<QuantumObject>().startpos;
         }

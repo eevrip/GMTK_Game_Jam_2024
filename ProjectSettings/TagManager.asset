@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - Box
   - Manager
+  - respawnBorder
   layers:
   - Default
   - TransparentFX

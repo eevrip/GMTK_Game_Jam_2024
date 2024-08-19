@@ -115,28 +115,48 @@ public class PlayerMovement : MonoBehaviour
         LastPressedJumpTime -= Time.deltaTime;
         LastPressedDashTime -= Time.deltaTime;
 
-        if (attacked)
+        /*if (attacked)
         {
             attackTimer -= Time.deltaTime;
             if (attackTimer < 0)
             {
                 attacked = false;
             }
-        }
+        }*/
         #endregion
 
         #region INPUT HANDLER
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
+        if (!attacked)
+        {
+            if (_moveInput.x != 0)
+            {
+                CheckDirectionToFace(_moveInput.x > 0);
+                disableAnims();
+                if (IsFacingRight)
+                {
+                    anim.SetBool("runningR", true);
+                }
+                else
+                {
+                    anim.SetBool("runningL", true);
+                }
 
-        if (_moveInput.x != 0)
-        {
-            CheckDirectionToFace(_moveInput.x > 0);
-            anim.SetBool("running", true);
-        }
-        else
-        {
-            anim.SetBool("running", false);
+            }
+            else
+            {
+                disableAnims();
+                if (IsFacingRight)
+                {
+                    anim.SetBool("idleR", true);
+                }
+                else
+                {
+                    anim.SetBool("idleL", true);
+                }
+            }
+        
         }
             
 
@@ -440,7 +460,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //stores scale and flips the player along the x axis, 
         Vector3 scale = transform.localScale;
-        scale.x *= -1;
+        scale.x *= 1;
         transform.localScale = scale;
 
         IsFacingRight = !IsFacingRight;
@@ -648,15 +668,42 @@ public class PlayerMovement : MonoBehaviour
     #region Collisions
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") && !attacked)
+        if ((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("respawnBorder")) && !attacked)
         {
             attacked = true;
-            // Respawn
-            Player.IsNewLevelLoaded = false;
-           Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.name);
 
+            disableAnims();
+            if (IsFacingRight)
+            {
+                anim.SetBool("dyingR", true);
+            }
+            else
+            {
+                anim.SetBool("dyingL", true);
+            }
+            StartCoroutine(respawning());
         }
+    }
+
+    public IEnumerator respawning()
+    {
+        yield return new WaitForSeconds(1f);
+        Player.IsNewLevelLoaded = false;
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+    #endregion
+
+    #region ANIMATIONS
+    public void disableAnims()
+    {
+        anim.SetBool("dyingL", false);
+        anim.SetBool("dyingR", false);
+        anim.SetBool("runningR", false);
+        anim.SetBool("runningL", false);
+        anim.SetBool("idleL", false);
+        anim.SetBool("idleR", false);
+        
     }
     #endregion
 }
