@@ -15,5 +15,9 @@ public class resetLevel : MonoBehaviour
         {
             other.transform.position = other.gameObject.GetComponent<QuantumObject>().startpos;
         }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

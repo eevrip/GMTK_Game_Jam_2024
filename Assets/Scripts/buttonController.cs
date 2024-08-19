@@ -18,7 +18,8 @@ public class buttonController : MonoBehaviour
 
     [SerializeField]
     private ActivationItem activationItem;
-
+    [SerializeField]
+    private bool hasUnpressedEffect;
     
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -61,9 +62,36 @@ public class buttonController : MonoBehaviour
         
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+
+        if (hasUnpressedEffect)
+        {
+            if (item)
+            {
+                switch (activationItem)
+                {
+                    case ActivationItem.Bridge:
+                        this.item.GetComponent<Bridge>().ExtendBridge();
+                        break;
+                    case ActivationItem.MovingPlatform:
+                        movingPlatform temp = this.item.GetComponent<movingPlatform>();
+                        temp.IsMoving = !temp.IsMoving;
+                        break;
+                    case ActivationItem.Door:
+                        this.item.GetComponent<Door>().OpenDoor();
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        }
+        
+
+    }
 
 
-    
 
-    
+
 }

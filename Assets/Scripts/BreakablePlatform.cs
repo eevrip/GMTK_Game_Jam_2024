@@ -18,9 +18,35 @@ public class BreakablePlatform : MonoBehaviour
            
             float relVelY = -other.relativeVelocity.y;
             float forceVal = otherRb.mass * relVelY;
+            Vector2 relDir = other.gameObject.transform.position - this.transform.position;
+            Vector2 relDirNor = relDir.normalized;
+            
+            float angle = Vector3.Dot(-Vector2.up, relDirNor);
+            float angleOffset = 0.1f;
             Debug.Log("vel= " + relVelY);
-            if (forceVal > breakingPoint)
+            if (forceVal > breakingPoint
+                || (otherRb.mass > breakingPoint && Mathf.Abs(1-angle)<angleOffset))
+                Destroy(gameObject);
+            }
+        
+    }
+    private void OnCollisionStay2D(Collision2D other)
+    {
+
+        Rigidbody2D otherRb = other.gameObject.GetComponent<Rigidbody2D>();
+        if (otherRb != null)
+        {
+
+           
+            Vector2 relDir = other.gameObject.transform.position - this.transform.position;
+            Vector2 relDirNor = relDir.normalized;
+
+            float angle = Vector3.Dot(Vector2.up, relDirNor);
+            float angleOffset = 0.1f;
+            Debug.Log(angle);
+            if (otherRb.mass > breakingPoint && Mathf.Abs(1 - angle) < angleOffset)
                 Destroy(gameObject);
         }
+
     }
 }
