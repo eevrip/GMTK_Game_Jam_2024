@@ -16,6 +16,8 @@ public class TimTheTardigrade : MonoBehaviour
     private float currDeviationAngle;
 
     public bool canMove;
+    public bool isUp;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class TimTheTardigrade : MonoBehaviour
     {
         if (canMove)
         {
+            
             Vector3 toDesiredPosition = player.transform.position + timsDesiredOffset - transform.position;
             toDesiredPosition.z = 0;
 

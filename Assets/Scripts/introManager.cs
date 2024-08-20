@@ -31,8 +31,9 @@ public class introManager : MonoBehaviour
             {
                 player.GetComponent<PlayerMovement>().IsFacingRight = false;
                 player.GetComponent<PlayerMovement>().anim.SetBool("runningL", true);
+                Tim.GetComponent<TimTheTardigrade>().anim.SetBool("intro", true);
                 player.transform.position = Vector2.MoveTowards(player.transform.position, new Vector2(-10, -2.25f), 5 * Time.deltaTime);
-                Tim.transform.position = new Vector2(-12, -3.8f);
+                Tim.transform.position = new Vector2(-12, -2.92f);
             }
 
 
@@ -46,7 +47,8 @@ public class introManager : MonoBehaviour
 
             if (timMove)
             {
-                Tim.transform.position = Vector2.MoveTowards(Tim.transform.position, new Vector2(-12, 0f), 6 * Time.deltaTime);
+                Tim.transform.position = Vector2.MoveTowards(Tim.transform.position, new Vector2(-13, -0.4f), 6 * Time.deltaTime);
+                Tim.GetComponent<TimTheTardigrade>().anim.SetBool("intro", false);
                 isOver = true;
             }
             

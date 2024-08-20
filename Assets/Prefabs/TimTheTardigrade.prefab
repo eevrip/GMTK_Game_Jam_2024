@@ -52,6 +52,8 @@ MonoBehaviour:
   randomAngleDeviation: 20
   deviationSpeed: 5
   canMove: 1
+  isUp: 0
+  anim: {fileID: 8771225725542026885}
 --- !u!95 &8771225725542026885
 Animator:
   serializedVersion: 5
