@@ -20,10 +20,13 @@ public class buttonController : MonoBehaviour
     private ActivationItem activationItem;
     [SerializeField]
     private bool hasUnpressedEffect;
+
+    public AudioSource buttonPress;
     
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        buttonPress.Play();
         if (affectsPlayer)
         {
             if (!increaseSize && sizeValue >= minSize)
