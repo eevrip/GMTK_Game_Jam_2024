@@ -84,7 +84,7 @@ public class FlyingEnemy : MonoBehaviour
 
     void Shoot(Vector3 direction)
     {
-        GameObject newBullet = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        GameObject newBullet = Instantiate(bullet, firepoint.position, Quaternion.identity);
         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
