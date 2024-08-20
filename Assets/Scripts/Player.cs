@@ -87,22 +87,45 @@ public class Player : MonoBehaviour
 
     void FireProjectile(GameObject projectilePrefab)
     {
-        this.GetComponent<PlayerMovement>().playShoot();
-        this.GetComponent<PlayerMovement>().shooting = true;
+       
 
         Debug.Log("Shoot");
-        Vector3 shootPos = transform.position + new Vector3(launchOffset.x * transform.localScale.x, launchOffset.y, launchOffset.z);
-        GameObject proj = Instantiate(projectilePrefab, shootPos, transform.rotation);
+      
 
         Vector3 mousePos = Input.mousePosition;
+       
+
+        
         Vector2 shootDirection = Camera.main.ScreenToWorldPoint(mousePos) - transform.position;
-        shootDirection.Normalize();
-        Vector2 force = new Vector2(projectileLaunchVelocity * shootDirection.x, projectileLaunchVelocity * shootDirection.y);
-        Vector2 ownVelocityForce = rb.velocity * rb.velocity * projectilePrefab.GetComponent<Rigidbody2D>().mass / 2;
-        ownVelocityForce.x *= transform.localScale.x;
-        Rigidbody2D projRb = proj.GetComponent<Rigidbody2D>();
-        projRb.AddRelativeForce(force + ownVelocityForce);
-        projRb.AddTorque(projectileLaunchTorque);
+        Vector2 righDir = Vector2.right;
+        PlayerMovement plm = GetComponent<PlayerMovement>();
+        if (plm != null)
+        {
+            if(!plm.IsFacingRight)
+            {
+                righDir = -Vector2.right ;
+            }
+        }
+        Vector2 shootDirNor = shootDirection.normalized;
+       
+        float angle = Vector3.Dot(shootDirNor, righDir);
+
+        if (angle > 0)
+        {
+
+            this.GetComponent<PlayerMovement>().playShoot();
+            this.GetComponent<PlayerMovement>().shooting = true;
+            Vector3 shootPos = transform.position + new Vector3(launchOffset.x * transform.localScale.x, launchOffset.y, launchOffset.z);
+        GameObject proj = Instantiate(projectilePrefab, shootPos, transform.rotation);
+
+            shootDirection.Normalize();
+            Vector2 force = new Vector2(projectileLaunchVelocity * shootDirection.x, projectileLaunchVelocity * shootDirection.y);
+            Vector2 ownVelocityForce = rb.velocity * rb.velocity * projectilePrefab.GetComponent<Rigidbody2D>().mass / 2;
+            ownVelocityForce.x *= transform.localScale.x;
+            Rigidbody2D projRb = proj.GetComponent<Rigidbody2D>();
+            projRb.AddRelativeForce(force + ownVelocityForce);
+            projRb.AddTorque(projectileLaunchTorque);
+        }
 
         fireCooldownTimer = 0;
     }
