@@ -11,8 +11,12 @@ public class BouncyBlock : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         int i = Random.Range(0, bouncyClips.Length);
-        bounceSound.clip = bouncyClips[i];
-        bounceSound.Play();
+
+        if (bounceSound)
+        {
+            bounceSound.clip = bouncyClips[i];
+            bounceSound.Play();
+        }
         Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
