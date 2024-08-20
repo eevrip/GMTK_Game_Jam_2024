@@ -22,6 +22,8 @@ public class MenuManager : MonoBehaviour
     public bool[] levels;
     public Button[] levelButtons;
 
+    public GameObject fade;
+
     private void Start()
     {
         Manager = GameObject.FindGameObjectWithTag("Manager");
@@ -44,20 +46,20 @@ public class MenuManager : MonoBehaviour
             continueButton.interactable = true;
         }
 
+        StartCoroutine(loadScreen());
     }
     public void startNewGame()
-    {
-        // if theres a save, ask if want to wipe all existing data
-        SceneManager.LoadScene(1);
+    {    
+        StartCoroutine(loadnextLevel(1));       
     }
     public void Continue()
     {
-        SceneManager.LoadScene(currentLevel+1);
+        StartCoroutine(loadnextLevel(currentLevel+1));
     }
 
     public void loadLevel(int levelNum)
     {
-        SceneManager.LoadScene(levelNum);
+        StartCoroutine(loadnextLevel(levelNum));
     }
 
     public void openSettings()
@@ -86,8 +88,6 @@ public class MenuManager : MonoBehaviour
                 levelButtons[i+1].interactable = true;
             }
         }
-        // if level 1 is not complete, only level 1 can be intereactable
-        // if level 1 is complete then level 2 can be interactable
     }
 
     public void backButton()
@@ -100,5 +100,19 @@ public class MenuManager : MonoBehaviour
     public void quit()
     {
         Application.Quit();
+    }
+
+    IEnumerator loadnextLevel(int levelnum)
+    {
+        fade.SetActive(true);
+        fade.GetComponent<Animator>().SetTrigger("Fade");
+        yield return new WaitForSeconds(1);
+        fade.GetComponent<Animator>().SetTrigger("Fade");
+        SceneManager.LoadScene(levelnum);
+    }
+    IEnumerator loadScreen()
+    {
+        yield return new WaitForSeconds(1);
+        fade.SetActive(false);
     }
 }

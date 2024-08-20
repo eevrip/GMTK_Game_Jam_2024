@@ -16,7 +16,11 @@ public class audioManager : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
     public Slider masterSlider;
-    
+
+    public AudioSource hoverSound;
+    public AudioSource clickSound;
+    public AudioSource playAudioSound;
+
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
@@ -34,5 +38,18 @@ public class audioManager : MonoBehaviour
         float volume = masterSlider.value;
         mainVolume = volume;
         mixer.SetFloat("master", Mathf.Log10(volume) * 20);
+    }
+
+    public void playHover()
+    {
+        hoverSound.Play();
+    }
+    public void click()
+    {
+        clickSound.Play();
+    }
+    public void playSound()
+    {
+        playAudioSound.Play();
     }
 }
