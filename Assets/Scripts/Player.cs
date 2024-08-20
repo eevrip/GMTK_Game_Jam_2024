@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
                             FireProjectile(growProjectilePrefab);
                         }
                     }
-                    else if (Input.GetButtonDown("Fire1"))
+                    else if (Input.GetButtonDown("Fire1") && !DialogueManager.Instance.sentenceAudioSource.isPlaying)
                     {
                         FireProjectile(shrikProjectilePrefab);
                     }
