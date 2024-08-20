@@ -761,7 +761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 77.29861
+      value: 77.298706
       objectReference: {fileID: 0}
     - target: {fileID: 1483874211528204841, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1536,6 +1536,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5666661790885549807, guid: 8a2c1078cf41811498b320a6c62c425e, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 927494481}
     - target: {fileID: 5666661790885549807, guid: 8a2c1078cf41811498b320a6c62c425e, type: 3}
       propertyPath: player
       value: 
@@ -20612,6 +20616,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &927494481 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7010323631155582207, guid: 8a2c1078cf41811498b320a6c62c425e, type: 3}
+  m_PrefabInstance: {fileID: 584810535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &986610169
 GameObject:
   m_ObjectHideFlags: 0
