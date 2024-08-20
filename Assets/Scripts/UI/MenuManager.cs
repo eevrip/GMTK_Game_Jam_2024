@@ -80,7 +80,15 @@ public class MenuManager : MonoBehaviour
     }
     public void Continue()
     {
-        StartCoroutine(loadnextLevel(currentLevel+1));
+        if(currentLevel+1 <= 2)
+        {
+            StartCoroutine(loadnextLevel(currentLevel + 1));
+        }
+        else
+        {
+            StartCoroutine(loadnextLevel(2));
+        }
+        
     }
 
     public void loadLevel(int levelNum)
