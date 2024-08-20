@@ -31,12 +31,20 @@ public class audioManager : MonoBehaviour
 
     private void Update()
     {
-        if(masterSlider.value == 1)
+        if (!mastersoundsicon)
+            return;
+        if (!musicsoundsicon)
+            return;
+        if (!sfxsoundsicon)
+            return;
+
+        if (masterSlider.value == 1)
         {
             mastersoundsicon.GetComponent<Image>().sprite = high;
         }
         else if(masterSlider.value < 1 && masterSlider.value > 0.3)
         {
+
             mastersoundsicon.GetComponent<Image>().sprite = med;
         }
         else
