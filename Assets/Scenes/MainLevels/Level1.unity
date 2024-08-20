@@ -978,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 77.29847
+      value: 77.29868
       objectReference: {fileID: 0}
     - target: {fileID: 1483874211528204841, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2187,7 +2187,7 @@ Transform:
   m_GameObject: {fileID: 583665099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06409359, y: 1.0191936, z: -10}
+  m_LocalPosition: {x: 0.064110756, y: 1.0211601, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4129,7 +4129,7 @@ CompositeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
   m_GenerationType: 0
-  m_EdgeRadius: 0.16
+  m_EdgeRadius: 0.03
   m_ColliderPaths:
   - m_Collider: {fileID: 822965085}
     m_ColliderPaths:
@@ -37309,7 +37309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5293729289219042646, guid: b1630e2795f8b724baa30cff924de795, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 97.42
+      value: 97.75
       objectReference: {fileID: 0}
     - target: {fileID: 5293729289219042646, guid: b1630e2795f8b724baa30cff924de795, type: 3}
       propertyPath: m_LocalPosition.y
