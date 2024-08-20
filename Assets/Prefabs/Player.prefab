@@ -449,6 +449,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   smoothTime: 1
   targetOffset: {x: 0, y: 0, z: 0}
+  Manager: {fileID: 0}
+  introManager: {fileID: 0}
+  IsFacingRight: 0
+  grounded: 0
   _groundCheckPoint: {fileID: 6398794294297143363}
   _groundCheckSize: {x: 0.49, y: 0.03}
   _frontWallCheckPoint: {fileID: 5438797827620468306}
@@ -490,12 +494,11 @@ MonoBehaviour:
   growProjectilePrefab: {fileID: 7588259697736553076, guid: 8ab6b72a62c17c84dac7ecd63eae1b1f, type: 3}
   shrikProjectilePrefab: {fileID: 2649992170811125180, guid: 6b38bd54fb334304cb6cf88e9423b57f, type: 3}
   projectileLaunchVelocity: 700
-  projectileLaunchTorque: 10
+  projectileLaunchTorque: 0
   launchOffset: {x: 1, y: 0.25, z: 0}
   fireCooldown: 0.2
   entanglementRangeVisualizer: {fileID: 1418448899855207749}
   timTheTardigradePrefab: {fileID: 1533784213210405305, guid: 97ea4b3cb3dc6ee449cdc894e69e9cef, type: 3}
-  spawnPoint: {x: 0, y: 0}
   canUseGrowProjectile: 1
 --- !u!82 &-9005540601039655023
 AudioSource:
