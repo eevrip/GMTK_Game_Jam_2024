@@ -24,12 +24,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject timTheTardigradePrefab;
 
-   
+    public Animator anim;
 
     private static bool isNewLevelLoaded;
     public static bool IsNewLevelLoaded { get { return isNewLevelLoaded; } set { isNewLevelLoaded = value; } }
 
-    public bool canUseGrowProjectile = true;
+    public bool canUseGrowProjectile = false;
 
     void Awake()
     {
@@ -66,6 +66,17 @@ public class Player : MonoBehaviour
                         {
                             FireProjectile(growProjectilePrefab);
                             this.GetComponent<PlayerMovement>().playShoot();
+                            this.GetComponent<PlayerMovement>().disableAnims();
+                            if (this.GetComponent<PlayerMovement>().IsFacingRight)
+                            {
+                                this.GetComponent<PlayerMovement>().anim.SetBool("shootingR", true);
+                            }
+                            else
+                            {
+                                this.GetComponent<PlayerMovement>().anim.SetBool("shootingL", true);
+                            }
+                            
+
                         }
                     }
                     else if (Input.GetButtonDown("Fire1"))
@@ -84,6 +95,8 @@ public class Player : MonoBehaviour
     }
     void FireProjectile(GameObject projectilePrefab)
     {
+        anim.SetTrigger("shoot");
+
         Debug.Log("Shoot");
         Vector3 shootPos = transform.position + new Vector3(launchOffset.x * transform.localScale.x, launchOffset.y, launchOffset.z);
         GameObject proj = Instantiate(projectilePrefab, shootPos, transform.rotation);

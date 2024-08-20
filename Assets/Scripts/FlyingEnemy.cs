@@ -17,6 +17,10 @@ public class FlyingEnemy : MonoBehaviour
     private float shootInterval = 2.0f;
     private float shootTimer;
 
+    public Animator anim;
+    public AudioSource targetAquired;
+    public bool played;
+
     void Update()
     {
         pointA.transform.position = new Vector3(pointA.transform.position.x, transform.position.y, transform.position.z);
@@ -57,6 +61,8 @@ public class FlyingEnemy : MonoBehaviour
         if(attackingPlayer)
         {
             // Aim at the player
+            anim.SetBool("attacking", true);
+            //targetAquired.Play();
             Vector3 direction = (player.transform.position - firepoint.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             firepoint.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -69,6 +75,11 @@ public class FlyingEnemy : MonoBehaviour
                 shootTimer = 0f;
             }
         }
+        else
+        {
+            anim.SetBool("attacking", false);
+            played = false;
+        }
     }
 
     void Shoot(Vector3 direction)
@@ -78,6 +89,15 @@ public class FlyingEnemy : MonoBehaviour
         if (rb != null)
         {
             rb.velocity = direction * bulletSpeed;
+        }
+    }
+
+    void targetFound()
+    {
+        if (!played)
+        {
+            played = true;
+            targetAquired.Play();
         }
     }
 }

@@ -717,8 +717,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if ((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("respawnBorder")) && !attacked)
         {
-            attacked = true;       
-            Manager.GetComponent<manager>().deathVoiceLineActive = true;
+            attacked = true;
+            if(Manager)
+                Manager.GetComponent<manager>().deathVoiceLineActive = true;
 
             disableAnims();
             if (IsFacingRight)
@@ -757,7 +758,9 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("runningL", false);
         anim.SetBool("idleL", false);
         anim.SetBool("idleR", false);
-        
+        anim.SetBool("shootingR", false);
+        anim.SetBool("shootingL", false);
+
     }
     #endregion
 
