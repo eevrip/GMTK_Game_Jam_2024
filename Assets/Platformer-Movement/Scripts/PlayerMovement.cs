@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
     public bool shooting;
     public float shootTimer;
 
+    public AudioSource dying;
+
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -774,6 +776,7 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator respawning()
     {
+        dying.Play();
         yield return new WaitForSeconds(1f);
         Player.IsNewLevelLoaded = false;
         Scene currentScene = SceneManager.GetActiveScene();
