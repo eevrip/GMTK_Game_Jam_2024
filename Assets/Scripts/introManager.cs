@@ -74,7 +74,8 @@ public class introManager : MonoBehaviour
         yield return new WaitForSeconds(47f);
         player.GetComponent<PlayerMovement>().attacked = false;
         Tim.GetComponent<TimTheTardigrade>().canMove = true;
-       
+        Tim.GetComponent<TimTheTardigrade>().EndTalking();
+
         Destroy(this);
     }
 }

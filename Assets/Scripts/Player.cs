@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private GameObject timTheTardigradePrefab;
+    public GameObject tim;
 
     public Animator anim;
 
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
        
 
-        GameObject tim = Instantiate(timTheTardigradePrefab);
+        tim = Instantiate(timTheTardigradePrefab);
         tim.transform.position = transform.position + tim.GetComponent<TimTheTardigrade>().timsDesiredOffset;
         if(!isNewLevelLoaded)
         {
@@ -128,5 +129,15 @@ public class Player : MonoBehaviour
         }
 
         fireCooldownTimer = 0;
+    }
+
+    public void PlayTalking()
+    {
+        tim.GetComponent<TimTheTardigrade>().PlayTalking();
+    }
+
+    public void EndTalking()
+    {
+        tim.GetComponent<TimTheTardigrade>().EndTalking();
     }
 }
