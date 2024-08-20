@@ -12,6 +12,14 @@ public class PatrollingEnemy : MonoBehaviour
     private bool movingToB = false;
     private bool attackingPlayer;
 
+    public AudioClip[] enemyFootsteps;
+    public AudioSource footsteps;
+    public float timer;
+
+    private void Start()
+    {
+        timer = 0.2f;
+    }
     void Update()
     {
         pointA.transform.position = new Vector3(pointA.transform.position.x, transform.position.y, transform.position.z);
@@ -52,6 +60,16 @@ public class PatrollingEnemy : MonoBehaviour
         else
         {
             //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+        }
+        
+        timer -= Time.deltaTime;
+
+        if(timer <= 0)
+        {
+            timer = 0.5f;
+            int i = Random.Range(0, enemyFootsteps.Length);
+            footsteps.clip = enemyFootsteps[i];
+            footsteps.Play();
         }
         
     }

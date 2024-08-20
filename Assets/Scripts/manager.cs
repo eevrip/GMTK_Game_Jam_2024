@@ -32,6 +32,8 @@ public class manager : MonoBehaviour
     public AudioSource deathVoice;
     public AudioClip[] deathVoiceLines;
 
+    
+
     void Awake()
     {
         if (instance == null)
@@ -45,6 +47,7 @@ public class manager : MonoBehaviour
             Destroy(gameObject);
         }
         LoadManager();
+        
     }
 
     void OnDestroy()
@@ -86,6 +89,7 @@ public class manager : MonoBehaviour
     {
         loadAudioLevels = false;
         Debug.Log("audio paused");
+        this.GetComponent<backgroundMusicPlayer>().changeMusic();
         loadScene();
     }
 
