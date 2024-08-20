@@ -499,6 +499,7 @@ MonoBehaviour:
   fireCooldown: 0.2
   entanglementRangeVisualizer: {fileID: 1418448899855207749}
   timTheTardigradePrefab: {fileID: 1533784213210405305, guid: 97ea4b3cb3dc6ee449cdc894e69e9cef, type: 3}
+  anim: {fileID: 8887480747200822482}
   canUseGrowProjectile: 1
 --- !u!82 &-9005540601039655023
 AudioSource:
