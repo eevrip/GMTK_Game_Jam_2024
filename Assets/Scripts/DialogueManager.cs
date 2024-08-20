@@ -155,6 +155,7 @@ public class DialogueManager : Singleton<DialogueManager>
 
         player.GetComponent<PlayerMovement>().attacked = false;
         tim.GetComponent<TimTheTardigrade>().canMove = true;
+        tim.GetComponent<TimTheTardigrade>().anim.SetBool("intro", false);
     }
 
     public void SkipDialogue()
