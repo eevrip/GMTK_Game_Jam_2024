@@ -3754,15 +3754,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.85
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.16
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8.85
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3774,7 +3774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1085524947814086015, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_Name
@@ -3783,7 +3783,7 @@ PrefabInstance:
     - target: {fileID: 4202196511676584803, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1856991985, guid: f83d8f3f99dcbe443a88c5d44ca233f4, type: 3}
+      objectReference: {fileID: 1793898273, guid: 266993f72c2a51b47816a0f1af7af73b, type: 3}
     - target: {fileID: 4202196511676584803, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -3795,6 +3795,14 @@ PrefabInstance:
     - target: {fileID: 4202196511676584803, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333603674775777707, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_Size.x
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333603674775777707, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_Size.y
+      value: 2.11
       objectReference: {fileID: 0}
     - target: {fileID: 5688991304854158431, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: breakingPoint
@@ -34688,6 +34696,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1991090449}
     m_Modifications:
     - target: {fileID: 504199988143793646, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 504199988143793646, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 504199988143793646, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 127.04418
       objectReference: {fileID: 0}
@@ -34727,9 +34743,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 662961094249921598, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1085524947814086015, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: m_Name
       value: Breakable Platform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202196511676584803, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1793898273, guid: 266993f72c2a51b47816a0f1af7af73b, type: 3}
+    - target: {fileID: 4202196511676584803, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202196511676584803, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202196511676584803, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333603674775777707, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
+      propertyPath: m_Size.x
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 5688991304854158431, guid: 02d791da36d23ed47b299185a31234bd, type: 3}
       propertyPath: breakingPoint
