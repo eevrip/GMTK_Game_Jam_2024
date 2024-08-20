@@ -17,7 +17,7 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private float timeBetweenLetterAnimation = 0.02f;
     [SerializeField] private AudioSource skipSFX;
     [SerializeField] private AudioSource blipSFX;
-    [SerializeField] private AudioSource sentenceAudioSource;
+    [SerializeField] public AudioSource sentenceAudioSource;
 
     [SerializeField] private bool waitForUserToClickContinue = false;
     [SerializeField] private float pauseBetweenMessages = 2f;
