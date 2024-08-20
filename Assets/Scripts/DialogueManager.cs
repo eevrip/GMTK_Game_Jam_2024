@@ -29,11 +29,18 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private UnityEvent function;
 
+    public GameObject player;
+    public GameObject tim;
+
     public void Awake()
     {
         sentences = new Queue<Sentence>();
     }
-
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        tim = GameObject.FindGameObjectWithTag("Tim");
+    }
     // Start is called before the first frame update
     public void StartDialogue(Dialogue dialogue)
     {
@@ -145,6 +152,9 @@ public class DialogueManager : Singleton<DialogueManager>
         timesClickedOnSkip = 0;
         if (skipButtonText)
             skipButtonText.text = "Skip";
+
+        player.GetComponent<PlayerMovement>().attacked = false;
+        tim.GetComponent<TimTheTardigrade>().canMove = true;
     }
 
     public void SkipDialogue()
@@ -165,5 +175,6 @@ public class DialogueManager : Singleton<DialogueManager>
                 FindAnyObjectByType<PlayerMovement>().attacked = false;
                 break;
         }
+        
     }
 }
