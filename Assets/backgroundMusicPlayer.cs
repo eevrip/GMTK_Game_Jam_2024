@@ -25,10 +25,12 @@ public class backgroundMusicPlayer : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 1)
             {
                 backgroundMusicLines1.Play();
+                backgroundMusicLines2.Stop();
             }
             else
             {
                 backgroundMusicLines2.Play();
+                backgroundMusicLines1.Stop();
             }
         }
     }
