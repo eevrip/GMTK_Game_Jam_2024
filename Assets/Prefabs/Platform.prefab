@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7905130716901613980}
   m_Layer: 0
   m_Name: MovingPlatform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   pointA: {fileID: 6609191753135823381}
   pointB: {fileID: 5687716679692232021}
   speed: 4
+  horizontally: 0
   isMoving: 1
 --- !u!61 &3985073724420064431
 BoxCollider2D:
