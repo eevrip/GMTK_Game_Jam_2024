@@ -26,7 +26,8 @@ public class buttonController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        buttonPress.Play();
+       if(buttonPress)
+            buttonPress.Play();
         if (affectsPlayer)
         {
             if (!increaseSize && sizeValue >= minSize)

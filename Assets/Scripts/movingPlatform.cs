@@ -9,17 +9,19 @@ public class movingPlatform : MonoBehaviour
     public float speed = 1.0f; 
 
     private bool movingToB = false;
-
+    [SerializeField] private bool horizontally;
+    public bool Horizontally { get { return horizontally; } set { horizontally = value; } }
     [SerializeField]private bool isMoving;
     public bool IsMoving { get { return isMoving; } set { isMoving = value; } }
     
     public static buttonController.ActivationItem typeOfActivation { get; private set; } = buttonController.ActivationItem.MovingPlatform;
-    void Update()
+    void FixedUpdate()
     {
-       if(isMoving)
+        if (isMoving)
         {
             Move();
         }
+        
     }
     
     public void Move()
@@ -45,7 +47,7 @@ public class movingPlatform : MonoBehaviour
             }
         }
     }
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -53,11 +55,11 @@ public class movingPlatform : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(null);
+            other.transform.SetParent(null);
         }
     }
 }
