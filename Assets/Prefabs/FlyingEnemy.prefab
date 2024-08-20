@@ -201,7 +201,7 @@ MonoBehaviour:
   player: {fileID: 0}
   bullet: {fileID: 6947994317732298613, guid: e24781f73b16cb34d98af7faf641eb35, type: 3}
   bulletSpeed: 10
-  anim: {fileID: 0}
+  anim: {fileID: 5936019395138041278}
   targetAquired: {fileID: 8882587171744463715}
   played: 0
 --- !u!61 &2245113525140673401

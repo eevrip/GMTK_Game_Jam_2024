@@ -47,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Manager;
 
     public GameObject introManager;
+    public bool shooting;
+    public float shootTimer;
 
 
     #region COMPONENTS
@@ -139,6 +141,16 @@ public class PlayerMovement : MonoBehaviour
         LastPressedDashTime -= Time.deltaTime;
 
         footstepTimer -= Time.deltaTime;
+        if (shooting)
+        {
+            shootTimer -= Time.deltaTime;
+            if(shootTimer <= 0)
+            {
+                shootTimer = 0.5f;
+                shooting = false;
+            }
+        }
+        
         #endregion
 
         #region INPUT HANDLER
@@ -151,22 +163,32 @@ public class PlayerMovement : MonoBehaviour
             {
                 CheckDirectionToFace(_moveInput.x > 0);
                 disableAnims();
-                if (IsFacingRight)
+                if (grounded && !shooting)
                 {
-                    if (grounded)
+                    if (IsFacingRight)
                     {
                         anim.SetBool("runningR", true);
-                    }                    
-                    targetOffset = new Vector3(10, 0, 0);
-                }
-                else
-                {
-                    if (grounded)
+                        targetOffset = new Vector3(10, 0, 0);
+                    }
+                    else
                     {
-                        anim.SetBool("runningL", true);
-                    }                                           
-                    targetOffset = new Vector3(-10, 0, 0);
+                        anim.SetBool("runningL", true);                       
+                        targetOffset = new Vector3(-10, 0, 0);
+                    }
                 }
+                else if (shooting)
+                {
+                    disableAnims();
+                    if (IsFacingRight)
+                    {
+                        anim.SetBool("shootingR", true);
+                    }
+                    else
+                    {
+                        anim.SetBool("shootingL", true);
+                    }
+                }
+                
 
                 if (footstepTimer <= 0 && !IsJumping)
                 {
@@ -177,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 disableAnims();
-                if (grounded)
+                if (grounded && !shooting)
                 {
                     if (IsFacingRight)
                     {
@@ -188,7 +210,19 @@ public class PlayerMovement : MonoBehaviour
                         anim.SetBool("idleL", true);                       
                     }
                 }
-                
+                else if (shooting)
+                {
+                    disableAnims();
+                    if (IsFacingRight)
+                    {
+                        anim.SetBool("shootingR", true);
+                    }
+                    else
+                    {
+                        anim.SetBool("shootingL", true);
+                    }
+                }
+
                 stopFootsteps();
             }
             cameraOffset.m_Offset = Vector3.SmoothDamp(cameraOffset.m_Offset, targetOffset, ref currentVelocity, smoothTime);

@@ -65,24 +65,11 @@ public class Player : MonoBehaviour
                         if (growProjectilePrefab && canUseGrowProjectile)
                         {
                             FireProjectile(growProjectilePrefab);
-                            this.GetComponent<PlayerMovement>().playShoot();
-                            this.GetComponent<PlayerMovement>().disableAnims();
-                            if (this.GetComponent<PlayerMovement>().IsFacingRight)
-                            {
-                                this.GetComponent<PlayerMovement>().anim.SetBool("shootingR", true);
-                            }
-                            else
-                            {
-                                this.GetComponent<PlayerMovement>().anim.SetBool("shootingL", true);
-                            }
-                            
-
                         }
                     }
                     else if (Input.GetButtonDown("Fire1"))
                     {
                         FireProjectile(shrikProjectilePrefab);
-                        this.GetComponent<PlayerMovement>().playShoot();
                     }
                 
                 }
@@ -95,7 +82,8 @@ public class Player : MonoBehaviour
     }
     void FireProjectile(GameObject projectilePrefab)
     {
-        anim.SetTrigger("shoot");
+        this.GetComponent<PlayerMovement>().playShoot();
+        this.GetComponent<PlayerMovement>().shooting = true;
 
         Debug.Log("Shoot");
         Vector3 shootPos = transform.position + new Vector3(launchOffset.x * transform.localScale.x, launchOffset.y, launchOffset.z);
