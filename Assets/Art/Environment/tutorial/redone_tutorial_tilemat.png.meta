@@ -1,0 +1,734 @@
+fileFormatVersion: 2
+guid: bf0f8cfce3055424ba4d0b850de4113f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_0
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 4293
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca39bb0d9bf3ba4d833772dd083c871
+      internalID: 666932429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 4301
+        width: 427
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefe88e82a486ca4cbc3811d1e44a357
+      internalID: -1707441892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_2
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 4301
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b19f59ea9e24d64f9e8a180c4543dce
+      internalID: 1580436501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_3
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 4288
+        width: 424
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70fd317b261db04cbc855ae73910721
+      internalID: 1204536387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_4
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 4283
+        width: 425
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce98dbf4e60b7d48843da670f8a6275
+      internalID: 1289189515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_5
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 4281
+        width: 427
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6b2badc0b65d74aae067f1c1db0ea4
+      internalID: 801076304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_6
+      rect:
+        serializedVersion: 2
+        x: 3068
+        y: 4313
+        width: 424
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88f0aba658ed4b4ca051d94d4b169c3
+      internalID: -660013349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_7
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 4293
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149a9830f639fb2489379e4b0d6d3011
+      internalID: 860817386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_8
+      rect:
+        serializedVersion: 2
+        x: 4078
+        y: 4264
+        width: 425
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9422e04cc8730847b83aa400d4e816d
+      internalID: -766081890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_9
+      rect:
+        serializedVersion: 2
+        x: 4628
+        y: 4252
+        width: 166
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c29d82cfcaeeea468f39c6d036d81d2
+      internalID: 1459654321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_10
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3810
+        width: 427
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19020e34757adb947aeb856c3ea2bb8e
+      internalID: 691046402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_11
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 3812
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15af42776d222ea4b9db8304cf52a8f6
+      internalID: 726846776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_12
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 3807
+        width: 427
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540efd059e35a96408c5c663c0e5d42f
+      internalID: -552859484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_13
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 3795
+        width: 427
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d3baa6fe1b9a441957c0513ff21235
+      internalID: -1341915924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_14
+      rect:
+        serializedVersion: 2
+        x: 2164
+        y: 3778
+        width: 428
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ea554689e3dd24e9f350f5f60a7ad1
+      internalID: 956044648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_15
+      rect:
+        serializedVersion: 2
+        x: 2723
+        y: 3790
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6093f90d2ce7a24996d4afb84f11748
+      internalID: 44957103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_16
+      rect:
+        serializedVersion: 2
+        x: 3224
+        y: 3795
+        width: 420
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec91611bd376dc24b873146a243e3582
+      internalID: -952014666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_17
+      rect:
+        serializedVersion: 2
+        x: 3739
+        y: 3785
+        width: 427
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27888580d6f3064a8ff734b7a9c25e2
+      internalID: 1043197988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_18
+      rect:
+        serializedVersion: 2
+        x: 4225
+        y: 3805
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c16daf5ce2f10e47a74ac3575ace810
+      internalID: -561893998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 3300
+        width: 425
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1237d2cd187ad74e8f8bce012276cfb
+      internalID: -1272882936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_20
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 3309
+        width: 428
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c82173a5abdfb54ab8a0729bb465296
+      internalID: -1241707731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_21
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3314
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bf9ce8fd443e542ac6a61588079237
+      internalID: 1863694960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_22
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 3314
+        width: 427
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10feec9e2a6ac9045a3a273df2302185
+      internalID: 187611809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_23
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 3322
+        width: 427
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ef8ca07eea66d45901ade34c57b143
+      internalID: -2017447619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_24
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 3273
+        width: 424
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8a61b99bff8674eb2309842bf4bf52
+      internalID: -1419779323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_25
+      rect:
+        serializedVersion: 2
+        x: 3263
+        y: 3283
+        width: 425
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69adcc93aedee74faa7a9cf6eb20a3a
+      internalID: -2094816591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redone_tutorial_tilemat_26
+      rect:
+        serializedVersion: 2
+        x: 3783
+        y: 3290
+        width: 427
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c037c56b73e5947915d6dbdac0f0e7
+      internalID: -931997788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      redone_tutorial_tilemat_0: 666932429
+      redone_tutorial_tilemat_1: -1707441892
+      redone_tutorial_tilemat_10: 691046402
+      redone_tutorial_tilemat_11: 726846776
+      redone_tutorial_tilemat_12: -552859484
+      redone_tutorial_tilemat_13: -1341915924
+      redone_tutorial_tilemat_14: 956044648
+      redone_tutorial_tilemat_15: 44957103
+      redone_tutorial_tilemat_16: -952014666
+      redone_tutorial_tilemat_17: 1043197988
+      redone_tutorial_tilemat_18: -561893998
+      redone_tutorial_tilemat_19: -1272882936
+      redone_tutorial_tilemat_2: 1580436501
+      redone_tutorial_tilemat_20: -1241707731
+      redone_tutorial_tilemat_21: 1863694960
+      redone_tutorial_tilemat_22: 187611809
+      redone_tutorial_tilemat_23: -2017447619
+      redone_tutorial_tilemat_24: -1419779323
+      redone_tutorial_tilemat_25: -2094816591
+      redone_tutorial_tilemat_26: -931997788
+      redone_tutorial_tilemat_3: 1204536387
+      redone_tutorial_tilemat_4: 1289189515
+      redone_tutorial_tilemat_5: 801076304
+      redone_tutorial_tilemat_6: -660013349
+      redone_tutorial_tilemat_7: 860817386
+      redone_tutorial_tilemat_8: -766081890
+      redone_tutorial_tilemat_9: 1459654321
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
