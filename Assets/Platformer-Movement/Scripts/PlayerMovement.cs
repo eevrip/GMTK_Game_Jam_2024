@@ -177,20 +177,18 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 disableAnims();
-                if (IsFacingRight)
+                if (grounded)
                 {
-                    if (grounded)
+                    if (IsFacingRight)
                     {
-                        anim.SetBool("idleR", true);
+                            anim.SetBool("idleR", true);
+                    }
+                    else
+                    {
+                        anim.SetBool("idleL", true);                       
                     }
                 }
-                else
-                {
-                    if (grounded)
-                    {
-                        anim.SetBool("idleL", true);
-                    }
-                }
+                
                 stopFootsteps();
             }
             cameraOffset.m_Offset = Vector3.SmoothDamp(cameraOffset.m_Offset, targetOffset, ref currentVelocity, smoothTime);
