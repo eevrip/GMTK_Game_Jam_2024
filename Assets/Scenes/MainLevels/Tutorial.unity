@@ -685,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 77.298676
+      value: 77.29868
       objectReference: {fileID: 0}
     - target: {fileID: 1483874211528204841, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1093,7 +1093,7 @@ Transform:
   m_GameObject: {fileID: 336071575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.088214874, y: 0.5752878, z: -10}
+  m_LocalPosition: {x: 10.402445, y: 0.5752878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17280,7 +17280,19 @@ MonoBehaviour:
     functionAtSentence: 0
     function:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 3148718192100825900}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: PlayTalking
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     sentences:
     - text: "(Grunt) Oh jeez thank you... Ahem Allow me to introduce myself... Wassup?
         I\u2019m Tim The All Knowing Tardigrade, but you can call me Tim Tardigrade
@@ -20679,6 +20691,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: -9005540601039655023, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
   m_PrefabInstance: {fileID: 3148718192100825897}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3148718192100825900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1783766166700139588, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+  m_PrefabInstance: {fileID: 3148718192100825897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148718192100825898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a3c006e4d821640b948ae8f50018a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &3148718192100825905 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7251376203809332830, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}

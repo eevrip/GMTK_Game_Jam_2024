@@ -45,4 +45,14 @@ public class TimTheTardigrade : MonoBehaviour
             transform.position += toDesiredPosition * speed * Time.deltaTime;
         }
     }
+
+    public void PlayTalking()
+    {
+        anim.SetBool("talking", true);
+    }
+
+    public void EndTalking()
+    {
+        anim.SetBool("talking", false);
+    }
 }
