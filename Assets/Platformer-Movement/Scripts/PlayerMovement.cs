@@ -758,7 +758,9 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("runningL", false);
         anim.SetBool("idleL", false);
         anim.SetBool("idleR", false);
-        
+        anim.SetBool("shootingR", false);
+        anim.SetBool("shootingL", false);
+
     }
     #endregion
 

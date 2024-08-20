@@ -66,6 +66,17 @@ public class Player : MonoBehaviour
                         {
                             FireProjectile(growProjectilePrefab);
                             this.GetComponent<PlayerMovement>().playShoot();
+                            this.GetComponent<PlayerMovement>().disableAnims();
+                            if (this.GetComponent<PlayerMovement>().IsFacingRight)
+                            {
+                                this.GetComponent<PlayerMovement>().anim.SetBool("shootingR", true);
+                            }
+                            else
+                            {
+                                this.GetComponent<PlayerMovement>().anim.SetBool("shootingL", true);
+                            }
+                            
+
                         }
                     }
                     else if (Input.GetButtonDown("Fire1"))
