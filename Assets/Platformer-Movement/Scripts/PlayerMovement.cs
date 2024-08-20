@@ -733,7 +733,7 @@ public class PlayerMovement : MonoBehaviour
             }
             StartCoroutine(respawning());
         }
-        else if (other.gameObject.CompareTag("Ground"))
+        else if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Box"))
         {
             grounded = true;
         }
