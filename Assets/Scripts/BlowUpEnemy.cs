@@ -11,6 +11,8 @@ public class BlowUpEnemy : MonoBehaviour
     public int damage = 8;
     private bool movingDown = false;
 
+    public AudioSource blowUp;
+
     private void Update()
     {
         if (Mathf.Abs(player.transform.position.x - transform.position.x) < 3f)
@@ -26,6 +28,7 @@ public class BlowUpEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        blowUp.Play();
         if (Vector3.Distance(player.transform.position, transform.position) < 5)
         {
             // Respawn

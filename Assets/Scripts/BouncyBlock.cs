@@ -5,10 +5,14 @@ using UnityEngine;
 public class BouncyBlock : MonoBehaviour
 {
     public float bounciness = 10.0f;
+    public AudioClip[] bouncyClips;
+    public AudioSource bounceSound;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-
+        int i = Random.Range(0, bouncyClips.Length);
+        bounceSound.clip = bouncyClips[i];
+        bounceSound.Play();
         Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
