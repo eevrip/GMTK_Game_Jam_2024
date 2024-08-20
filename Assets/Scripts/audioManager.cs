@@ -21,6 +21,65 @@ public class audioManager : MonoBehaviour
     public AudioSource clickSound;
     public AudioSource playAudioSound;
 
+    public Sprite high;
+    public Sprite med;
+    public Sprite low;
+
+    public GameObject mastersoundsicon;
+    public GameObject musicsoundsicon;
+    public GameObject sfxsoundsicon;
+
+    private void Update()
+    {
+        if (!mastersoundsicon)
+            return;
+        if (!musicsoundsicon)
+            return;
+        if (!sfxsoundsicon)
+            return;
+
+        if (masterSlider.value == 1)
+        {
+            mastersoundsicon.GetComponent<Image>().sprite = high;
+        }
+        else if(masterSlider.value < 1 && masterSlider.value > 0.3)
+        {
+
+            mastersoundsicon.GetComponent<Image>().sprite = med;
+        }
+        else
+        {
+            mastersoundsicon.GetComponent<Image>().sprite = low;
+        }
+
+        if (musicSlider.value == 1)
+        {
+            musicsoundsicon.GetComponent<Image>().sprite = high;
+        }
+        else if (musicSlider.value < 1 && musicSlider.value > 0.3)
+        {
+            musicsoundsicon.GetComponent<Image>().sprite = med;
+        }
+        else
+        {
+            musicsoundsicon.GetComponent<Image>().sprite = low;
+        }
+
+        if (sfxSlider.value == 1)
+        {
+            sfxsoundsicon.GetComponent<Image>().sprite = high;
+        }
+        else if (sfxSlider.value < 1 && sfxSlider.value > 0.3)
+        {
+            sfxsoundsicon.GetComponent<Image>().sprite = med;
+        }
+        else
+        {
+            sfxsoundsicon.GetComponent<Image>().sprite = low;
+        }
+
+    }
+
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
