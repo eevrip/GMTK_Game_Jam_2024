@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3463836254769212259}
   m_Layer: 3
   m_Name: BouncyBoxNaturallyEntangled
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,10 @@ MonoBehaviour:
   EntangledVisuals: {fileID: 7318426466258295211}
   entanglementParticleSystem: {fileID: 8646364840219667394}
   isNaturallyEntangled: 1
+  startpos: {x: 0, y: 0}
   canBeMoved: 0
+  canKill: 0
+  canDisappear: 0
 --- !u!61 &583273443501833604
 BoxCollider2D:
   m_ObjectHideFlags: 0
