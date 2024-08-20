@@ -91,10 +91,8 @@ public class DialogueManager : Singleton<DialogueManager>
             }
         }
         Sentence sentence = sentences.Dequeue();
-        //Debug.Log(sentence);
-        //dialogueText.text = sentence;
+
         StopAllCoroutines();
-        //StartCoroutine(TypeSentence(sentence));
 
         StartCoroutine(CheckNextSentence(sentence));
     }
@@ -111,10 +109,7 @@ public class DialogueManager : Singleton<DialogueManager>
 
         if (!waitForUserToClickContinue)
         {
-            //yield return new WaitForSecondsRealtime(sentenceAudioSource.clip.length);
-            Debug.Log("End clip length");
             yield return new WaitForSecondsRealtime(pauseBetweenMessages);
-            Debug.Log("End pause");
 
             DisplayNextSentence();
         }
@@ -167,6 +162,7 @@ public class DialogueManager : Singleton<DialogueManager>
                     skipSFX.Play();
                 if (sentenceAudioSource.isPlaying)
                     sentenceAudioSource.Stop();
+                FindAnyObjectByType<PlayerMovement>().attacked = false;
                 break;
         }
     }
