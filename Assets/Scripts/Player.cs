@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
 
     public bool canUseGrowProjectile = false;
 
+    public AudioSource entanglementSound;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,11 +48,13 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-       
-
         if (QuantumObjectsManager.instance.isInEntanglementMode)
         {   fireCooldownTimer = 0f;
             entanglementRangeVisualizer.SetActive(true);
+            if (Input.GetButtonDown("Fire1"))
+            {
+                entanglementSound.Play();
+            }
             return; // No firing projectiles when in entanglement mode
             
         }
@@ -80,6 +84,7 @@ public class Player : MonoBehaviour
     {
         transform.position = checkpoint;
     }
+
     void FireProjectile(GameObject projectilePrefab)
     {
         this.GetComponent<PlayerMovement>().playShoot();
