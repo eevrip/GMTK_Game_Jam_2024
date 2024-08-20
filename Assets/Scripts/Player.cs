@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
             {
                 entanglementSound.Play();
             }
-            return; // No firing projectiles when in entanglement mode
+            return;
             
         }
         else
