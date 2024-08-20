@@ -151,6 +151,20 @@ MonoBehaviour:
   pointB: {fileID: 1551210185613219642}
   speed: 2.5
   player: {fileID: 0}
+  enemyFootsteps:
+  - {fileID: 8300000, guid: 05d12098cb30fb047801f623b62f5727, type: 3}
+  - {fileID: 8300000, guid: c9f8ef0c9f3f2884fb5ccde5913a3a22, type: 3}
+  - {fileID: 8300000, guid: 5b541470d3a1787478ffb01094e888f5, type: 3}
+  - {fileID: 8300000, guid: 2e2f8786b650c0e4d9ebfc1a1a33092a, type: 3}
+  - {fileID: 8300000, guid: dfdaa9bc9d232cb48a71df883ee184c3, type: 3}
+  - {fileID: 8300000, guid: dc39d3c457cb8454399fc411f1efa467, type: 3}
+  - {fileID: 8300000, guid: 9a6f8e38590620347857e2aa978a1545, type: 3}
+  - {fileID: 8300000, guid: 81ab22656ff57cd43b99bdc8691a9600, type: 3}
+  - {fileID: 8300000, guid: fa45e456612819748b1ec9eed7bc8a71, type: 3}
+  footsteps: {fileID: 8479564092515796439}
+  timer: 0
+  maxVolumeDistance: 30
+  minVolumeDistance: 0
 --- !u!50 &3410829634679081627
 Rigidbody2D:
   serializedVersion: 4
