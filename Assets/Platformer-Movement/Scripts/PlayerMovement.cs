@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
             shootTimer -= Time.deltaTime;
             if(shootTimer <= 0)
             {
-                shootTimer = 1f;
+                shootTimer = 0.5f;
                 shooting = false;
             }
         }
