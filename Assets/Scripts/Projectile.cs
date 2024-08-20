@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
 public class Projectile : MonoBehaviour
 {
 	public enum ProjectileType { Grow, Shrink}
 	public ProjectileType projectileType = ProjectileType.Shrink;
 	private bool hasCollided = false;
+    
+    [SerializeField]
+    private GameObject explosionVfx;
 
-	void Start()
+    void Start()
 	{
-		
-	}
+        
+    }
 
 	void Update()
 	{
@@ -42,6 +46,15 @@ public class Projectile : MonoBehaviour
 			}
 		}
 
+        Instantiate(explosionVfx, transform.position, transform.rotation);
+
+		//StartCoroutine(DelayedDestroy());
 		Destroy(gameObject);
 	}
+
+    IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
+    }
 }
