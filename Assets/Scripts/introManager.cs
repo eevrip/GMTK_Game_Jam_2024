@@ -10,40 +10,47 @@ public class introManager : MonoBehaviour
     public Dialogue timDialogue2;
     public bool arrived;
     public bool timMove;
-
+    public static bool isOver;
     private void Start()
     {
-        DialogueManager.Instance.StartDialogue(timDialogue);
-        // cannot move
-        player.GetComponent<PlayerMovement>().attacked = true;
-        Tim = GameObject.FindGameObjectWithTag("Tim");
-        Tim.GetComponent<TimTheTardigrade>().canMove = false;
+        if (!isOver)
+        {
+            DialogueManager.Instance.StartDialogue(timDialogue);
+            // cannot move
+            player.GetComponent<PlayerMovement>().attacked = true;
+            Tim = GameObject.FindGameObjectWithTag("Tim");
+            Tim.GetComponent<TimTheTardigrade>().canMove = false;
+        }
     }
 
     private void Update()
     {
-        if (!arrived)
+        if (!isOver)
         {
-            player.GetComponent<PlayerMovement>().IsFacingRight = false;
-            player.GetComponent<PlayerMovement>().anim.SetBool("runningL", true);
-            player.transform.position = Vector2.MoveTowards(player.transform.position, new Vector2(-10, -2.25f), 5 * Time.deltaTime);
-            Tim.transform.position = new Vector2(-12, -3.8f);
+            if (!arrived)
+            {
+                player.GetComponent<PlayerMovement>().IsFacingRight = false;
+                player.GetComponent<PlayerMovement>().anim.SetBool("runningL", true);
+                player.transform.position = Vector2.MoveTowards(player.transform.position, new Vector2(-10, -2.25f), 5 * Time.deltaTime);
+                Tim.transform.position = new Vector2(-12, -3.8f);
+            }
+
+
+            if (player.transform.position == new Vector3(-10, -2.25f, player.transform.position.z))
+            {
+                player.GetComponent<PlayerMovement>().anim.SetBool("runningL", false);
+                player.GetComponent<PlayerMovement>().anim.SetBool("idleL", true);
+                arrived = true;
+                StartCoroutine(playTimIntro());
+            }
+
+            if (timMove)
+            {
+                Tim.transform.position = Vector2.MoveTowards(Tim.transform.position, new Vector2(-12, 0f), 6 * Time.deltaTime);
+                isOver = true;
+            }
+            
         }
-
-
-        if (player.transform.position == new Vector3(-10, -2.25f, player.transform.position.z))
-        {
-            player.GetComponent<PlayerMovement>().anim.SetBool("runningL", false);
-            player.GetComponent<PlayerMovement>().anim.SetBool("idleL", true);
-            arrived = true;
-            StartCoroutine(playTimIntro());
-        }
-
-        if (timMove)
-        {           
-            Tim.transform.position = Vector2.MoveTowards(Tim.transform.position, new Vector2(-12, 0f), 6 * Time.deltaTime);
-        }
-
     }
 
     void playTimAudio()
@@ -55,6 +62,7 @@ public class introManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2.4f);
         timMove = true;
+       
         playTimAudio();
         StartCoroutine(stopIntro());
     }
@@ -64,6 +72,7 @@ public class introManager : MonoBehaviour
         yield return new WaitForSeconds(47f);
         player.GetComponent<PlayerMovement>().attacked = false;
         Tim.GetComponent<TimTheTardigrade>().canMove = true;
+       
         Destroy(this);
     }
 }

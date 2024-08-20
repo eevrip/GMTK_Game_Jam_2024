@@ -24,7 +24,7 @@ public class BreakablePlatform : MonoBehaviour
             float angleVer = Mathf.Abs(Vector3.Dot(Vector2.up, relDirNor));
             float angleHor = Mathf.Abs(Vector3.Dot(Vector2.right, relDirNor));
             float angleOffset = 0.1f;
-
+           // Debug.Log(relVelY + " " + otherRb.mass+" " + breakingPoint);
             if (forceVal > breakingPoint
                 || (otherRb.mass > breakingPoint && Mathf.Abs(1-angleVer)<angleOffset) 
                 || (otherRb.mass > breakingPoint && Mathf.Abs(1 - angleHor) < angleOffset))
