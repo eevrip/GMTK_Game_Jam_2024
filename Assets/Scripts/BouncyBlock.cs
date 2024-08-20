@@ -25,4 +25,5 @@ public class BouncyBlock : MonoBehaviour
             rb.AddForce(bounceDirection * bounciness, ForceMode2D.Impulse);
         }
     }
+    
 }
