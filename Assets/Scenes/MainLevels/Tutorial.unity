@@ -685,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1146241880959530915, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 77.2986
+      value: 77.29868
       objectReference: {fileID: 0}
     - target: {fileID: 1483874211528204841, guid: 69488a47c5bcdaa4cab8071aa8191426, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1093,7 +1093,7 @@ Transform:
   m_GameObject: {fileID: 336071575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09773064, y: 0.5752878, z: -10}
+  m_LocalPosition: {x: 10.402445, y: 0.5752878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17280,7 +17280,19 @@ MonoBehaviour:
     functionAtSentence: 0
     function:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 3148718192100825900}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: PlayTalking
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     sentences:
     - text: "(Grunt) Oh jeez thank you... Ahem Allow me to introduce myself... Wassup?
         I\u2019m Tim The All Knowing Tardigrade, but you can call me Tim Tardigrade
@@ -17614,6 +17626,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8026577035738024664, guid: 54567c6f2321aa646abe7bafa977ffc9, type: 3}
   m_PrefabInstance: {fileID: 660408203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1363388533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 981060852972257607, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+  m_PrefabInstance: {fileID: 7897607155335257783}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1370090910
 GameObject:
@@ -20674,6 +20691,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: -9005540601039655023, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
   m_PrefabInstance: {fileID: 3148718192100825897}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3148718192100825900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1783766166700139588, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
+  m_PrefabInstance: {fileID: 3148718192100825897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148718192100825898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a3c006e4d821640b948ae8f50018a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &3148718192100825905 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7251376203809332830, guid: 83dac0050824d8c4f8dd1bf914f1e53c, type: 3}
@@ -20740,6 +20768,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f140d84ddcfe11947a09caf3bc6cc781, type: 3}
+--- !u!1001 &7897607155335257783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 981060852972257607, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_Name
+      value: Bridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 981060852972257607, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 46.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4491521
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093324084454142340, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d398e23dd34627943a93dd3a25fcbc86, type: 3}
 --- !u!1001 &7926175832539076546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20811,7 +20900,7 @@ PrefabInstance:
     - target: {fileID: 6002646884332337515, guid: b1630e2795f8b724baa30cff924de795, type: 3}
       propertyPath: items.Array.data[0]
       value: 
-      objectReference: {fileID: 1941091410}
+      objectReference: {fileID: 1363388533}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20841,3 +20930,4 @@ SceneRoots:
   - {fileID: 1133515008}
   - {fileID: 2131402847}
   - {fileID: 1167388727}
+  - {fileID: 7897607155335257783}
