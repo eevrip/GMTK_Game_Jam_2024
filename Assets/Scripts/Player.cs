@@ -82,8 +82,6 @@ public class Player : MonoBehaviour
     }
     void FireProjectile(GameObject projectilePrefab)
     {
-        anim.SetTrigger("shoot");
-
         this.GetComponent<PlayerMovement>().playShoot();
         this.GetComponent<PlayerMovement>().shooting = true;
 
