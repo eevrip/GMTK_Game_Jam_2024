@@ -1,0 +1,973 @@
+fileFormatVersion: 2
+guid: 696fce88b1b9e0247a2ce68c1a26f22b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tutorial_tilemat_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2367
+        width: 170
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9456ebbbde492344a8dc6ec313bad8c
+      internalID: 1330019760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_1
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 2367
+        width: 422
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3a75319e0480143bd3550fd8e02d87
+      internalID: 1533623411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_2
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 2367
+        width: 415
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c21dea4e5590254ca56f9e6e2ae80dd
+      internalID: -1190703907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_3
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 2368
+        width: 417
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26691f20cefacc04ab84f7655b0d8a4d
+      internalID: 95378145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_4
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 2372
+        width: 415
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdef71506261ca643aed47b7a5fbeeb1
+      internalID: 1719549559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_5
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 2370
+        width: 417
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f3ce1243f2cd9498a4a05bca99b8d8
+      internalID: 323806422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_6
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 2370
+        width: 414
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6facdcce751d149abb4773abcfd975
+      internalID: 1973184622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_7
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 2365
+        width: 417
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf64a03f558b7c04c9cb57730fcd3376
+      internalID: 1784364405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_8
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 2365
+        width: 415
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30859077b8d2a3348ac15a9ec50d0e6b
+      internalID: -2084376872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1784
+        width: 414
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbb74a7788340b48b25857aa1b5c810
+      internalID: -932361096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_10
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1784
+        width: 415
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d6ac17e32ec3343a95005d650d9d67
+      internalID: 1695236627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_11
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1784
+        width: 426
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4101190ee510549ab169544ca62dfd
+      internalID: 1113209943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_12
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 1784
+        width: 415
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b78102bb0d4e3346ac2020fb5b3cfef
+      internalID: -1300584442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_13
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 1784
+        width: 424
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3d01420541ae543a2d5a4e9515de82
+      internalID: 924004667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_14
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 1793
+        width: 415
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4491bc0d93aa7ae4b9be5cc36703f50c
+      internalID: 114362172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_15
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 1793
+        width: 424
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd21a407d180b541b98bef41b29ed78
+      internalID: 1133668238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_16
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 1802
+        width: 412
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e58edd1b4122f4fa26fb55d074d609
+      internalID: -652111720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1195
+        width: 424
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42702de15495d0f4490f12a08d34dff9
+      internalID: -1851062291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_18
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1206
+        width: 415
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f6f5bdcbb8e1f469a34b67a19591b0
+      internalID: -922860157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_19
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1217
+        width: 425
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16b5d5e52aa78f49b4e58e43f1436d7
+      internalID: -626809617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_20
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 1217
+        width: 414
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b11a234a2a5cf40a54054779c65009
+      internalID: -1684690858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_21
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 1217
+        width: 136
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fa2a12f1d5c4d468ab02d3a85dff1d
+      internalID: -1087057159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_22
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 1215
+        width: 414
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3c57619b7775a478e0418ca9a606b8
+      internalID: 736412254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_23
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 783
+        width: 243
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1f0a2455c15b94d84880e3adb147f8
+      internalID: 1666079796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_24
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 785
+        width: 128
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5881fdad79bf6124597b7ec57280cde9
+      internalID: -1791958168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_25
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 758
+        width: 321
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321e0bc3cb422f440a2125ca53ee0e67
+      internalID: -1319489882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_26
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 758
+        width: 254
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8600e30cdcafef40b24d0f75ec37ebf
+      internalID: -468851032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_27
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 588
+        width: 236
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254ae6e040fe6d34ebfa3901932aa9fb
+      internalID: 382112241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_28
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 610
+        width: 251
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0a5f4f248d82a43b62a2a1b54a37d8
+      internalID: 1927660585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 341
+        width: 232
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773faea45820ddd4a80a4382988627cf
+      internalID: 426281861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_30
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 342
+        width: 168
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb50b164d3662644bb0a2a38aaa4cac
+      internalID: 648631522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_31
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 331
+        width: 339
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee04abdd90d36044a8f116bfe2a5997
+      internalID: 1602450681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_32
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 331
+        width: 254
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd79fbb0b416c3498b27a676d53e9e0
+      internalID: 1459066102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_33
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 145
+        width: 229
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c08fca25b764340b26dbe430cb9cbe
+      internalID: -1640644280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_34
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 141
+        width: 299
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad43b5c3f85c6a04eaea3c2a55e822a4
+      internalID: -1918226626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_35
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 249
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e979ca666ba83f343bc6e1fcf0392d55
+      internalID: -414171416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_36
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 0
+        width: 190
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f94a56180687c84b8aebfcd3fb72472
+      internalID: 1945015721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_37
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 40
+        width: 286
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277d1458b5295e444af29bc25e74e5b5
+      internalID: 1200204352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorial_tilemat_38
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 14
+        width: 268
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d80d5723b16e1a42824fad3a0d9071c
+      internalID: -609496693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tutorial_tilemat_0: 1330019760
+      tutorial_tilemat_1: 1533623411
+      tutorial_tilemat_10: 1695236627
+      tutorial_tilemat_11: 1113209943
+      tutorial_tilemat_12: -1300584442
+      tutorial_tilemat_13: 924004667
+      tutorial_tilemat_14: 114362172
+      tutorial_tilemat_15: 1133668238
+      tutorial_tilemat_16: -652111720
+      tutorial_tilemat_17: -1851062291
+      tutorial_tilemat_18: -922860157
+      tutorial_tilemat_19: -626809617
+      tutorial_tilemat_2: -1190703907
+      tutorial_tilemat_20: -1684690858
+      tutorial_tilemat_21: -1087057159
+      tutorial_tilemat_22: 736412254
+      tutorial_tilemat_23: 1666079796
+      tutorial_tilemat_24: -1791958168
+      tutorial_tilemat_25: -1319489882
+      tutorial_tilemat_26: -468851032
+      tutorial_tilemat_27: 382112241
+      tutorial_tilemat_28: 1927660585
+      tutorial_tilemat_29: 426281861
+      tutorial_tilemat_3: 95378145
+      tutorial_tilemat_30: 648631522
+      tutorial_tilemat_31: 1602450681
+      tutorial_tilemat_32: 1459066102
+      tutorial_tilemat_33: -1640644280
+      tutorial_tilemat_34: -1918226626
+      tutorial_tilemat_35: -414171416
+      tutorial_tilemat_36: 1945015721
+      tutorial_tilemat_37: 1200204352
+      tutorial_tilemat_38: -609496693
+      tutorial_tilemat_39: 1043145126
+      tutorial_tilemat_4: 1719549559
+      tutorial_tilemat_5: 323806422
+      tutorial_tilemat_6: 1973184622
+      tutorial_tilemat_7: 1784364405
+      tutorial_tilemat_8: -2084376872
+      tutorial_tilemat_9: -932361096
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
