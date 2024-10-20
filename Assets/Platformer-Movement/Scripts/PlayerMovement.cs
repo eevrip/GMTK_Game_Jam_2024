@@ -822,6 +822,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void playShoot()
     {
+        Debug.Log("PewPew");
         int i = Random.Range(0, shoot.Length);
         otherAudio.clip = shoot[i];
         otherAudio.Play();

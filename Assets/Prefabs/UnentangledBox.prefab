@@ -27,8 +27,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0354, y: 1.0354, z: 1.0354}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3881188260473199270}
   m_Father: {fileID: 6175053363078327572}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0.06252861, a: 1}
   m_FlipX: 0
@@ -144,6 +144,9 @@ MonoBehaviour:
   isNaturallyEntangled: 0
   startpos: {x: 0, y: 0}
   canBeMoved: 0
+  canKill: 0
+  canDisappear: 0
+  audioSrc: {fileID: 0}
 --- !u!61 &1533652028260702740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -187,7 +190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.94, y: 0.94}
   m_EdgeRadius: 0
 --- !u!50 &2993018456092183062
 Rigidbody2D:
@@ -288,7 +291,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 11
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.5026107, g: 0.27450988, b: 0.8, a: 1}
   m_FlipX: 0

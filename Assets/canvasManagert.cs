@@ -5,13 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class canvasManagert : MonoBehaviour
 {
-    public void home()
+    public GameObject fade;
+
+    public void Home()
     {
         SceneManager.LoadScene(0);
     }
 
-    public void reset()
+    public void ResetLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+      //  Player.IsNewLevelLoaded = true;
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Scene currentScene = SceneManager.GetActiveScene();
+        loadLevel(currentScene.buildIndex);
+    }
+    IEnumerator loadLevel(int levelnum)
+    {
+        fade.SetActive(false);
+        fade.GetComponent<Animator>().SetTrigger("Fade");
+        yield return new WaitForSeconds(1);
+        fade.GetComponent<Animator>().SetTrigger("Fade");
+        SceneManager.LoadScene(levelnum);
     }
 }

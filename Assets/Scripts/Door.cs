@@ -12,14 +12,14 @@ public class Door : MonoBehaviour
     public void OpenDoor()
     {
         if (isOpen)
-        {
-            gameObject.SetActive(false);
-            isOpen = false;
+        {isOpen = false;
+            gameObject.SetActive(true);
+            
         }
         else
-        {
-            gameObject.SetActive(true);
-            isOpen = true;
+        {isOpen = true;
+            gameObject.SetActive(false);
+            
         }
     }
 }

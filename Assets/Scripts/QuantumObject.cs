@@ -45,6 +45,9 @@ public class QuantumObject : MonoBehaviour
     [SerializeField]
     private bool canDisappear;
     public bool CanDisappear => canDisappear;
+
+    [SerializeField]
+    private AudioSource audioSrc;
     private void Awake()
     {
         startpos = transform.position;
@@ -157,6 +160,8 @@ public class QuantumObject : MonoBehaviour
 
             if (other.gameObject.CompareTag("Enemy"))
             {
+                audioSrc.Play();
+                
                 Destroy(other.gameObject);
             }
         }

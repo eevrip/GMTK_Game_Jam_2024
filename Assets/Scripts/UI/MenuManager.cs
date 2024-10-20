@@ -69,7 +69,7 @@ public class MenuManager : MonoBehaviour
 
         if (currentLevel > 0)
         {
-            continueButton.interactable = true;
+           // continueButton.interactable = true;
         }
 
         StartCoroutine(loadScreen());
@@ -93,7 +93,8 @@ public class MenuManager : MonoBehaviour
 
     public void loadLevel(int levelNum)
     {
-        StartCoroutine(loadnextLevel(levelNum));
+        SceneManager.LoadScene(levelNum);
+        // StartCoroutine(loadnextLevel(levelNum));
     }
 
     public void openSettings()
@@ -118,6 +119,7 @@ public class MenuManager : MonoBehaviour
             }
             else if (levels[i])
             {
+               
                 levelButtons[i].interactable = true;
                 levelButtons[i+1].interactable = true;
             }

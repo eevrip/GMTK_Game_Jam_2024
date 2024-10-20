@@ -22,12 +22,17 @@ public class buttonController : MonoBehaviour
     private bool hasUnpressedEffect;
 
     public AudioSource buttonPress;
-    
+
+    [SerializeField]private bool isAwake;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-       if(buttonPress)
+        if (!isAwake) { 
+        if (buttonPress)
             buttonPress.Play();
+       
+        } 
+        isAwake = false;
         if (affectsPlayer)
         {
             if (!increaseSize && sizeValue >= minSize)
@@ -51,13 +56,16 @@ public class buttonController : MonoBehaviour
                     {
                         case ActivationItem.Bridge:
                             item.GetComponent<Bridge>().ExtendBridge();
+                           
                             break;
                         case ActivationItem.MovingPlatform:
                             movingPlatform temp = item.GetComponent<movingPlatform>();
                             temp.IsMoving = !temp.IsMoving;
+                           
                             break;
                         case ActivationItem.Door:
                             item.GetComponent<Door>().OpenDoor();
+                          
                             break;
                         default:
                             break;
@@ -74,6 +82,8 @@ public class buttonController : MonoBehaviour
 
         if (hasUnpressedEffect)
         {
+            if (buttonPress)
+                buttonPress.Play();
             foreach (GameObject item in items)
             {
                 if (item)

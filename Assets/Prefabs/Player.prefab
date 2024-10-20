@@ -445,7 +445,7 @@ MonoBehaviour:
   attackTimer: 0
   anim: {fileID: 8887480747200822482}
   walkingAudio: {fileID: -9005540601039655023}
-  otherAudio: {fileID: -9005540601039655023}
+  otherAudio: {fileID: 7251376203809332830}
   jump:
   - {fileID: 8300000, guid: dd3019272e9a64142a0272f2ca94ff19, type: 3}
   - {fileID: 8300000, guid: a7b6c5574ecfd0941af6458b9cfb316b, type: 3}
@@ -526,6 +526,7 @@ MonoBehaviour:
   fireCooldown: 0.2
   entanglementRangeVisualizer: {fileID: 1418448899855207749}
   timTheTardigradePrefab: {fileID: 1533784213210405305, guid: 97ea4b3cb3dc6ee449cdc894e69e9cef, type: 3}
+  tim: {fileID: 0}
   anim: {fileID: 8887480747200822482}
   canUseGrowProjectile: 1
   entanglementSound: {fileID: 3694112230366896675}
@@ -733,7 +734,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 4595586130626672276, guid: 8fa0fdd8d48a5fc47b6588627e4c69f1, type: 2}
   m_audioClip: {fileID: 8300000, guid: c97bdb7cd68a94e46b777269c438b9d8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.639
   m_Pitch: 1
   Loop: 0
   Mute: 0

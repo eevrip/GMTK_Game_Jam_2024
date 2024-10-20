@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3523380280431432908}
   - component: {fileID: 8766616441966779517}
   - component: {fileID: 5009059279286821288}
+  - component: {fileID: 2997889024256708635}
   m_Layer: 0
   m_Name: Entanglement Particle System
   m_TagString: Untagged
@@ -4831,3 +4832,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &2997889024256708635
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031227190450170598}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 12
+  m_SortAtRoot: 0

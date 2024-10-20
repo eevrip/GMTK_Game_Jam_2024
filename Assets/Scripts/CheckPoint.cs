@@ -10,7 +10,7 @@ public class CheckPoint : MonoBehaviour
         {
             if(collision.transform.tag == "Player")
             {
-                Player.LastCheckpoint = transform.position;
+                Player.LastCheckpoint = transform.position + new Vector3(0f, 1.57f, 0f);
             }
         }
     }

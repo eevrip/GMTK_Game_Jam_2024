@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class PatrollingEnemy : MonoBehaviour
@@ -13,25 +14,55 @@ public class PatrollingEnemy : MonoBehaviour
     private bool attackingPlayer;
 
     public AudioClip[] enemyFootsteps;
+    [SerializeField]
+    private AudioClip targetAquired;
     public AudioSource footsteps;
+    [SerializeField] AudioSource other;
     public float timer;
     public float maxVolumeDistance = 10f;
     public float minVolumeDistance = 2f;
-
+    
+    public LayerMask layerMask;
     public Animator anim;
 
     private void Start()
     {
         timer = 0.2f;
     }
+
+    public bool IsPlayerInFOV()
+    {
+        
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, (player.transform.position - transform.position).normalized, 10f, layerMask);
+        Debug.DrawRay(transform.position, (player.transform.position-transform.position).normalized *hit.distance, Color.yellow);
+           if(hit.collider!=null)
+            if(hit.collider.gameObject.CompareTag("Player"))
+            {
+                return true;
+            }
+           
+                /*if(hit.collider !=null)
+        {
+            Debug.Log("hitting things" + hit.collider.name + "player" + hit.distance);
+        }*/
+           
+        return false;
+    }
     void Update()
     {
         pointA.transform.position = new Vector3(pointA.transform.position.x, transform.position.y, transform.position.z);
         pointB.transform.position = new Vector3(pointB.transform.position.x, transform.position.y, transform.position.z);
 
-        if (Vector3.Distance(transform.position, player.transform.position) < 10f)
+        if (IsPlayerInFOV() && Vector3.Distance(transform.position, player.transform.position) < 10f)
         {
-           // attackingPlayer = true;
+            if (!attackingPlayer)
+            {
+               
+                other.clip = targetAquired;
+               other.Play();
+            }
+            attackingPlayer = true;
+           // Debug.Log("Can see player");
         }
         else
         {
@@ -65,7 +96,7 @@ public class PatrollingEnemy : MonoBehaviour
         }
         else
         {
-            //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);

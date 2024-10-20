@@ -96,7 +96,7 @@ public class manager : MonoBehaviour
     // Sets the slider values to whatever was saved/set
     void loadScene()
     {
-        
+        Debug.Log("Loading scene");
         GameObject musicSliderObject = GameObject.Find("musicVolume");
         GameObject sfxSliderObject = GameObject.Find("sfxVolume");
         GameObject masterSliderObject = GameObject.Find("masterVolume");
@@ -126,14 +126,16 @@ public class manager : MonoBehaviour
         {
             Debug.Log("Sliders successfully assigned.");
         }
-
+        audioManager am = audioManager.GetComponent<audioManager>();
         musicSlider.value = musicVolume;
-        audioManager.GetComponent<audioManager>().musicVolume = musicVolume;
+        am.musicVolume = musicVolume;
+       
         sfxSlider.value = sfxVolume;
-        audioManager.GetComponent<audioManager>().sfxVolume = sfxVolume;
+       am.sfxVolume = sfxVolume;
+      
         masterSlider.value = mainVolume;
-        audioManager.GetComponent<audioManager>().mainVolume = mainVolume;
-
+        am.mainVolume = mainVolume;
+       
         if (settings.activeSelf)
         {
             settings.SetActive(false);

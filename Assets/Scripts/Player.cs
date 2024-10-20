@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private GameObject entanglementRangeVisualizer;
-
+    
     private static Vector2 lastCheckpoint;
     public static Vector2 LastCheckpoint { get { return lastCheckpoint; } set {  lastCheckpoint = value; } }
 
@@ -41,10 +41,16 @@ public class Player : MonoBehaviour
 
         tim = Instantiate(timTheTardigradePrefab);
         tim.transform.position = transform.position + tim.GetComponent<TimTheTardigrade>().timsDesiredOffset;
-        if(!isNewLevelLoaded)
+
+        if (!isNewLevelLoaded)
         {
             ResetPosition(lastCheckpoint);
         }
+
+        else
+        {
+            lastCheckpoint = transform.position;
+        } Debug.Log("last check = " +lastCheckpoint);
     }
 
     void Update()
@@ -52,6 +58,7 @@ public class Player : MonoBehaviour
         if (QuantumObjectsManager.instance.isInEntanglementMode)
         {   fireCooldownTimer = 0f;
             entanglementRangeVisualizer.SetActive(true);
+            
             if (Input.GetButtonDown("Fire1"))
             {
                 entanglementSound.Play();

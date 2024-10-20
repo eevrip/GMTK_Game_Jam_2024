@@ -63,6 +63,7 @@ MonoBehaviour:
   canBeMoved: 0
   canKill: 0
   canDisappear: 0
+  audioSrc: {fileID: 0}
 --- !u!61 &583273443501833604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -408,7 +409,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0.06252861, a: 1}
   m_FlipX: 0
@@ -431,6 +432,7 @@ GameObject:
   - component: {fileID: 3002832511803002791}
   - component: {fileID: 361008097778734058}
   - component: {fileID: 1000398525445859588}
+  - component: {fileID: 3809227793276958969}
   m_Layer: 0
   m_Name: Entanglement Particle System
   m_TagString: Untagged
@@ -5251,3 +5253,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &3809227793276958969
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646364840219667394}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_SortAtRoot: 0
