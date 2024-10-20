@@ -5,26 +5,48 @@ using UnityEngine.SceneManagement;
 
 public class canvasManagert : MonoBehaviour
 {
+    public GameObject Manager;
     public GameObject fade;
-
-    public void Home()
+    public int levelNum;
+   
+    private void Start()
     {
-        SceneManager.LoadScene(0);
+        Manager = GameObject.FindGameObjectWithTag("Manager");
+        Manager.GetComponent<manager>().levels[levelNum] = true;
+       
+
+       
+    }
+    public void Home()
+
+    {
+        Time.timeScale = 1; 
+        Manager.GetComponent<manager>().SaveManager();
+
+        fade.GetComponent<Animator>().SetTrigger("Fade"); 
+        StartCoroutine(loadnextLevel(0));
+      //  SceneManager.LoadScene(0);
     }
 
     public void ResetLevel()
     {
-      //  Player.IsNewLevelLoaded = true;
+        Time.timeScale = 1;
+        Manager.GetComponent<manager>().SaveManager();
+
+        fade.GetComponent<Animator>().SetTrigger("Fade");
+          Player.IsNewLevelLoaded = true;
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Scene currentScene = SceneManager.GetActiveScene();
-        loadLevel(currentScene.buildIndex);
+        StartCoroutine(loadnextLevel(SceneManager.GetActiveScene().buildIndex));
     }
-    IEnumerator loadLevel(int levelnum)
+    
+    IEnumerator loadnextLevel(int levelnum)
     {
-        fade.SetActive(false);
-        fade.GetComponent<Animator>().SetTrigger("Fade");
         yield return new WaitForSeconds(1);
-        fade.GetComponent<Animator>().SetTrigger("Fade");
+        Player.IsNewLevelLoaded = true;
+        
         SceneManager.LoadScene(levelnum);
+        
+            
     }
 }
